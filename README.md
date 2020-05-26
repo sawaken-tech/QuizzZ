@@ -1,24 +1,108 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null: false, unique: true, index: true|
+|mail|string|null: false, unique: true|
+|password|string|null: false, unique: true|
+|rate_id|iforegin||
+|comment_id|foregin||
+|score|foregin||
 
-Things you may want to cover:
+### user_Association
+- has_many: questions
+- has_many: comments
+- has_many: rates
+- has_one: score
 
-* Ruby version
 
-* System dependencies
+## scoresテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer||
+|total_correct|integer||
+|four_correct|integer||
+|sort_correct|integer||
+|description_correct|integer||
+|total_score|integer||
 
-* Configuration
+### score_Association
+- belongs_to: user
 
-* Database creation
 
-* Database initialization
+## questionsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false, index: true|
+|sentence|text|null: false|
+|answer|string|null: false|
+|explain|string|null: false|
+|question_format|string|null: false|
+|select|foregin|null: false|
+|genre|string|null: false|
+|rate_id|foregin|  |
 
-* How to run the test suite
+### question_Association
+- belongs_to: user
+- has_many: comments
+- has_many: rates
+- has_many: fours
+- has_many: sorts
+- has_many: descriptions
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## foursテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|question_id|integer||
+|image|text||
 
-* ...
+### four_Association
+- belongs_to: question
+
+
+## sortsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|question_id|integer||
+|image|text||
+
+### sort_Association
+- belongs_to: question
+
+
+## descriptionsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|question_id|integer||
+|image|text||
+
+### description_Association
+- belongs_to: question
+
+
+## commentテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer||
+|question_id|integer||
+|comment|text||
+
+### comment_Association
+- belongs_to: user
+- belongs_to: question
+
+## rateテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer||
+|question_id|integer||
+|rate|text||
+
+### rate_Association
+- belongs_to: user
+- belongs_to: question
