@@ -1,0 +1,56 @@
+// 新規登録画面
+.userCreate {
+  background-color: #C0C0C0;
+  padding: 30px;
+  &__main {
+    background-color: #EEEEEE;
+    width: 700px;
+    margin: auto;
+    border: 10px double #777777; 
+    border-radius: 10px;
+    text-align: center;
+    &__up {
+      display: flex;
+      justify-content: center;
+      &__formbox {
+        padding: 10px;
+        &__title {
+          @include title_form;
+        }
+        &__form {
+          @include form_size;
+        }
+      }
+    }
+    &__down {
+      display: flex;
+      justify-content: center;
+      &__formbox {
+        padding: 10px;
+        &__title {
+          @include title_form;
+        }
+        &__form {
+          @include form_size;
+        }
+      }
+    }
+    
+    &__submit {
+      padding: 10px;
+      &__btn {
+        input {
+          width: 80px;
+          height: 40px;
+          margin: 20px auto;
+          border-radius: 5px;
+          font-size: 14px;
+          background-color: white;
+        }
+        input:hover {
+          background-color: #C0C0C0;
+        }
+      }
+    }
+  }
+}
