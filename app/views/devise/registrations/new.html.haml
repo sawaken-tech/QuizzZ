@@ -1,52 +1,31 @@
 .userCreate
   .userCreate__main
-    = form_for(resource, as: resource_name, url: new_user_registration_path(resource_name)) do |f|
-      .userCreate__main__formbox
+    = form_for(@user, url: registration_path(resource_name)) do |f|
+      .userCreate__main__up
+        .userCreate__main__up__formbox
+          .userCreate__main__up__formbox__title
+            = f.label :nickname, "name"
+          .userCreate__main__up__formbox__form
+            = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
 
-        .userCreate__main__formbox__title
-          = f.label :nickname, "nickname"
-        .userCreate__main__formbox__form
-          = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
+        .userCreate__main__up__formbox
+          .userCreate__main__up__formbox__title
+            = f.label :email, "e-mail"
+          .userCreate__main__up__formbox__form
+            = f.email_field :email, autocomplete: "email"
 
-      .userCreate__main__formbox
-        .userCreate__main__formbox__title
-          = f.label :email, "e-mail"
-        .userCreate__main__formbox__form
-          = f.email_field :email, autocomplete: "email"
-
-      .userCreate__main__formbox
-        .userCreate__main__formbox__title
-          = f.label :password, "password"
-        .userCreate__main__formbox__form
-          = f.password_field :password, autocomplete: "off"
-        .userCreate__main__formbox__title
-          = f.label :password_confirmation, "パスワード再入力"
-        .userCreate__main__formbox__form
-          = f.password_field :password_confirmation, autocomplete: "off"
+      .userCreate__main__down
+        .userCreate__main__down__formbox
+          .userCreate__main__down__formbox__title
+            = f.label :password, "password"
+          .userCreate__main__down__formbox__form
+            = f.password_field :password, autocomplete: "off"
+        .userCreate__main__down__formbox
+          .userCreate__main__down__formbox__title
+            = f.label :password_confirmation, "Re-password"
+          .userCreate__main__down__formbox__form
+            = f.password_field :password_confirmation, autocomplete: "off"
       
-      .userCreate__main__submitBtn
-        = f.submit "Sign up"
-
--# %h2 Sign up
--# = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
--#   = render "devise/shared/error_messages", resource: resource
--#   .field
--#     = f.label :nickname
--#     %br/
--#     = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
--#   .field
--#     = f.label :email
--#     %br/
--#     = f.email_field :email, autocomplete: "email"
--#   .field
--#     = f.label :password
--#     - if @minimum_password_length
--#       %em
--#         (#{@minimum_password_length} characters minimum)
--#     %br/
--#     = f.password_field :password, autocomplete: "new-password"
--#   .field
--#     = f.label :password_confirmation
--#     %br/
--#     = f.password_field :password_confirmation, autocomplete: "new-password"
--# = render "devise/shared/links"
+      .userCreate__main__submit
+        .userCreate__main__submit__btn
+          = f.submit "make"

@@ -1,0 +1,13 @@
+@mixin title_form {
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 16px;
+}
+
+@mixin form_size {
+  input {
+    width: 200px;
+    height: 40px;
+  }
+}
