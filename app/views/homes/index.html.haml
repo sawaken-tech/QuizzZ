@@ -1,3 +1,26 @@
+.headder
+  .headder__title
+    QuizzZ
+.topPage
+  .topPage__mainLeft
+    .topPage__mainLeft__message
+      .topPage__mainLeft__message__up
+        Let's Play 「QuizzZ」
+      .topPage__mainLeft__message__down
+        .topPage__mainLeft__message__down__create
+          Create
+        .topPage__mainLeft__message__down__and
+          &
+        .topPage__mainLeft__message__down__slove
+          Slove
+  .topPage__mainRight
+    .topPage__mainRight__login
+      = link_to "Login", new_user_session_path, class: 'topPage__mainRight__login__btn'
+    .topPage__mainRight__newUser
+      = link_to "New", new_user_registration_path, class: 'topPage__mainRight__newUser__btn'
+
+
+
 %h1 QuizzZ
 
 - if user_signed_in?

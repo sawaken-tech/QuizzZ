@@ -1,13 +1,12 @@
 // 新規登録画面
 .userCreate {
-  background-color: #C0C0C0;
+  @include color_background;
   padding: 30px;
   &__main {
     background-color: #EEEEEE;
     width: 700px;
     margin: auto;
-    border: 10px double #777777; 
-    border-radius: 10px;
+    @include border_frame;
     text-align: center;
     &__up {
       display: flex;
