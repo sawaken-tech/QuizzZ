@@ -2,4 +2,8 @@
 @import "bootstrap";
 
 @import "mixin/form";
+@import "mixin/color";
+
+@import "modules/home/index";
+
 @import "modules/user/user_create";

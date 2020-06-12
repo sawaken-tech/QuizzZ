@@ -1,9 +1,36 @@
-%h1 QuizzZ
-
-- if user_signed_in?
-  ログインしています
-  = link_to "ログアウト", destroy_user_session_path, method: :delete
-- else
-  ログインしていません
-  = link_to "新規登録", new_user_registration_path
-  = link_to "ログイン", new_user_session_path
+.headder
+  .headder__title
+    QuizzZ
+.topPage
+  - if user_signed_in?
+    .topPage__mainLeft
+      .topPage__mainLeft__message
+        .topPage__mainLeft__message__up
+          Let's Play 「QuizzZ」
+        .topPage__mainLeft__message__down
+          .topPage__mainLeft__message__down__create
+            = link_to "Create", '#'
+          .topPage__mainLeft__message__down__and
+            &
+          .topPage__mainLeft__message__down__slove
+            = link_to "Slove", '#'
+    .topPage__mainRight
+      .topPage__mainRight__login
+        = link_to "Logout", destroy_user_session_path, method: :delete, class: 'topPage__mainRight__logout__btn'
+  - else
+    .topPage__mainLeft
+      .topPage__mainLeft__message
+        .topPage__mainLeft__message__up
+          Let's Play 「QuizzZ」
+        .topPage__mainLeft__message__down
+          .topPage__mainLeft__message__down__create
+            Create
+          .topPage__mainLeft__message__down__and
+            &
+          .topPage__mainLeft__message__down__slove
+            Slove
+    .topPage__mainRight
+      .topPage__mainRight__login
+        = link_to "Login", new_user_session_path, class: 'topPage__mainRight__login__btn'
+      .topPage__mainRight__newUser
+        = link_to "New", new_user_registration_path, class: 'topPage__mainRight__newUser__btn'

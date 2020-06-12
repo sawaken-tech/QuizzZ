@@ -1,0 +1,16 @@
+@mixin color_background {
+  background-color: #C0C0C0;
+}
+
+@mixin border_frame {
+  border: 10px double #777777; 
+  border-radius: 10px;
+}
+
+@mixin color_create {
+  color: #FFA500;
+}
+
+@mixin color_slove {
+  color: #00BFFF;
+}

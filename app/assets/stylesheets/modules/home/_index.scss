@@ -1,0 +1,71 @@
+.topPage {
+  display: flex;
+  padding: 100px;
+  @include color_background;
+  &__mainLeft {
+    margin: 0 auto;
+    padding: 100px 0;
+    &__message {
+      font-size: 50px;
+      font-weight: bold;
+      &__up {
+      }
+      &__down {
+        padding: 50px 0;
+        display: flex;
+        &__create {
+          @include color_create;
+        }
+        &__and {
+          padding: 0 20px;
+          font-size: 40px;
+          line-height: 75px;
+        }
+        &__slove {
+          @include color_slove;
+        }
+      }
+    }
+  }
+  &__mainRight {
+    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #C0C0C0;
+    &__logout {
+      margin-bottom: 50px;
+      &__btn {
+        display: block;
+        width: 200px;
+        padding: 20px 40px;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        background-color: white;
+        font-size: 30px;
+      }
+    }
+    &__login {
+      margin-bottom: 50px;
+      &__btn {
+        display: block;
+        width: 200px;
+        padding: 20px 40px;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        background-color: white;
+        font-size: 30px;
+      }
+    }
+    &__newUser {
+      &__btn {
+        display: block;
+        width: 200px;
+        padding: 20px 40px;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        background-color: white;
+        font-size: 30px;
+      }
+    }
+  }
+}
