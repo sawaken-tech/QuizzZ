@@ -1,3 +1,3 @@
 class Description < ApplicationRecord
-  belongs_to :answer
+  belongs_to :answer, optional: true
 end

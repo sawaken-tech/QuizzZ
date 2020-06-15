@@ -3,4 +3,5 @@ class Question < ApplicationRecord
   has_many   :rates
   has_many   :comments
   has_one    :answer
+  validates :title, :sentence, :question_format, presence: true
 end
