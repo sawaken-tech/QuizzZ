@@ -4,8 +4,8 @@ class CreateQuestions < ActiveRecord::Migration[5.0]
       t.string :title,              null: false
       t.text :sentence,             null: false
       t.string :question_format,    null: false
-      t.integer :rate_id,           foreign_key: true
-      t.integer :comment_id,        foreign_key: true
+      t.references :rate
+      t.references :comment
     end
     add_index :questions, :title
   end

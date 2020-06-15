@@ -7,8 +7,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
       t.string :nickname,           null: false
-      t.integer :rate_id,           foreign_key: true
-      t.integer :comment_id,        foreign_key: true
+      t.references :rate
+      t.references :comment
       t.integer :score_id,          foreign_key: true
 
       ## Recoverable
