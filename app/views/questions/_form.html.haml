@@ -1,1 +1,14 @@
 .createPage
+  .createPage__question
+    = form_for @question do |f|
+      .createPage__question__title
+        = f.label :title, "Title"
+        = f.text_field :title
+      .createPage__question__sentence
+        = f.label :sentence, "Sentence"
+        = f.text_area :sentence
+      .createPage__question__format
+        = f.label :question_format, "Format"
+        = f.select :question_format, [['Four', 1], ['Sort', 2], ['Description', 3]], { include_blank: true }
+      .createPage__question__btn
+        = f.submit "Next"
