@@ -1,5 +1,8 @@
 # README
 
+##　DB設計image図
+![QuizzZ＿DB設計](https://user-images.githubusercontent.com/60286772/84636378-7cc79600-af2f-11ea-873e-7d6f9ce74471.png)
+
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -36,53 +39,64 @@
 |------|----|-------|
 |title|string|null: false, index: true|
 |sentence|text|null: false|
-|answer|string|null: false|
-|explain|string|null: false|
 |question_format|string|null: false|
-|select|foregin|null: false|
-|genre|string|null: false|
-|rate_id|foregin|  |
+|rate_id|foregin||
+|comment_id|foregin||
 
 ### question_Association
 - belongs_to: user
+- has_one: answer
 - has_many: comments
 - has_many: rates
-- has_many: fours
-- has_many: sorts
-- has_many: descriptions
+
+
+## answersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|answer|string|null: false|
+|explain|string|null: false|
+|select|foregin|null: false|
+|genre|string|null: false|
+|question_id|reference|optional: true|
+
+### answer_Association
+- belongs_to: question
+- has_one: fours
+- has_one: sorts
+- has_one: descriptions
 
 
 ## foursテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string||
-|question_id|integer||
+|answer_id|integer||
 |image|text||
 
 ### four_Association
-- belongs_to: question
+- belongs_to: answer
 
 
 ## sortsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string||
-|question_id|integer||
+|answer_id|integer||
 |image|text||
 
 ### sort_Association
-- belongs_to: question
+- belongs_to: answer
 
 
 ## descriptionsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string||
-|question_id|integer||
+|answer_id|integer||
 |image|text||
 
 ### description_Association
-- belongs_to: question
+- belongs_to: answer
 
 
 ## commentテーブル
