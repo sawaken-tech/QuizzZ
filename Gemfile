@@ -56,3 +56,4 @@ gem "haml-rails"
 gem 'devise'
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'pry-rails'
