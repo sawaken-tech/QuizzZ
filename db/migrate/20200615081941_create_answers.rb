@@ -3,9 +3,8 @@ class CreateAnswers < ActiveRecord::Migration[5.0]
     create_table :answers do |t|
       t.string :answer,             null: false
       t.string :explain,            null: false
-      t.string :genre,              foreign_key: true, null: false
-      t.string :select,             foreign_key: true, null: false
-      t.references :question
+      t.string :genre,              foreign_key: true
+      t.references :question,       foreign_key: true
     end
   end
 end

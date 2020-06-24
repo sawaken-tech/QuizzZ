@@ -1,1 +1,16 @@
-= render "form"
+- flash.each do |key, value|
+  = content_tag :div, value, class: key
+.createPage
+  .createPage__question
+    = form_for @question do |f|
+      .createPage__question__title
+        = f.label :title, "Title"
+        = f.text_field :title
+      .createPage__question__sentence
+        = f.label :sentence, "Sentence"
+        = f.text_area :sentence
+      .createPage__question__format
+        = f.label :question_format, "Format"
+        = f.select :question_format, [[Four], [Sort], [Description]], { include_blank: true }
+      .createPage__question__btn
+        = f.submit "Next"

@@ -15,8 +15,7 @@ ActiveRecord::Schema.define(version: 20200615083528) do
   create_table "answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "answer",      null: false
     t.string  "explain",     null: false
-    t.string  "genre",       null: false
-    t.string  "select",      null: false
+    t.string  "genre"
     t.integer "question_id"
     t.index ["question_id"], name: "index_answers_on_question_id", using: :btree
   end
@@ -25,22 +24,18 @@ ActiveRecord::Schema.define(version: 20200615083528) do
     t.integer "user_id"
     t.integer "question_id"
     t.text    "comment",     limit: 65535
-    t.index ["question_id"], name: "index_comments_on_question_id", using: :btree
-    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
   create_table "descriptions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string  "name"
+    t.string  "answer"
     t.integer "answer_id"
     t.text    "image",     limit: 65535
-    t.index ["answer_id"], name: "index_descriptions_on_answer_id", using: :btree
   end
 
   create_table "fours", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string  "name"
+    t.string  "select"
     t.integer "answer_id"
     t.text    "image",     limit: 65535
-    t.index ["answer_id"], name: "index_fours_on_answer_id", using: :btree
   end
 
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -49,6 +44,7 @@ ActiveRecord::Schema.define(version: 20200615083528) do
     t.string  "question_format",               null: false
     t.integer "rate_id"
     t.integer "comment_id"
+    t.integer "user_id"
     t.index ["comment_id"], name: "index_questions_on_comment_id", using: :btree
     t.index ["rate_id"], name: "index_questions_on_rate_id", using: :btree
     t.index ["title"], name: "index_questions_on_title", using: :btree
@@ -58,15 +54,12 @@ ActiveRecord::Schema.define(version: 20200615083528) do
     t.integer "user_id"
     t.integer "question_id"
     t.string  "rate"
-    t.index ["question_id"], name: "index_rates_on_question_id", using: :btree
-    t.index ["user_id"], name: "index_rates_on_user_id", using: :btree
   end
 
   create_table "sorts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string  "name"
+    t.string  "select"
     t.integer "answer_id"
     t.text    "image",     limit: 65535
-    t.index ["answer_id"], name: "index_sorts_on_answer_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -88,4 +81,5 @@ ActiveRecord::Schema.define(version: 20200615083528) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "answers", "questions"
 end

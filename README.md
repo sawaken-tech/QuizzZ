@@ -55,7 +55,6 @@
 |------|----|-------|
 |answer|string|null: false|
 |explain|string|null: false|
-|select|foregin|null: false|
 |genre|string|null: false|
 |question_id|reference|optional: true|
 
@@ -69,7 +68,7 @@
 ## foursテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string||
+|select|string||
 |answer_id|integer||
 |image|text||
 
@@ -80,7 +79,7 @@
 ## sortsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string||
+|select|string||
 |answer_id|integer||
 |image|text||
 
@@ -91,7 +90,7 @@
 ## descriptionsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string||
+|answer|string||
 |answer_id|integer||
 |image|text||
 

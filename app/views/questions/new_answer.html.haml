@@ -1,0 +1,36 @@
+- flash.each do |key, value|
+  = content_tag :div, value, class: key
+.createPage
+  .createPage__answer
+    = form_for @answer, url:answer_questions_path(@answer) do |f|
+      .createPage__answer__answerTitle
+        = f.label :answer, "Answer"
+        = f.text_field :answer
+      .createPage__answer__four
+        = f.fields_for :fours, @answer.fours.build do |four|
+          .createPage__answer__four__select
+            = four.label :select, "Select"
+            = four.text_field :select
+          .createPage__answer__four__img
+            = four.label :image, "Image"
+            = four.file_field :image
+          -# .createPage__answer__four__select
+          -#   = four.label :select, "Select"
+          -#   = four.text_field :select
+          -# .createPage__answer__four__img
+          -#   = four.label :image, "Image"
+          -#   = four.file_field :image
+          -# .createPage__answer__four__select
+          -#   = four.label :select, "Select"
+          -#   = four.text_field :select
+          -# .createPage__answer__four__img
+          -#   = four.label :image, "Image"
+          -#   = four.file_field :image
+      .createPage__answer__explain
+        = f.label :explain, "Explain"
+        = f.text_area :explain
+      .createPage__answer__genre
+        = f.label :genre, "Genre"
+        = f.select :genre, [['test0'], ['test1'], ['test2']], { include_blank: true }
+      .createPage__question__btn
+        = f.submit "Next"

@@ -6,6 +6,7 @@ class CreateQuestions < ActiveRecord::Migration[5.0]
       t.string :question_format,    null: false
       t.references :rate
       t.references :comment
+      t.integer :user_id,           foreign_key: true
     end
     add_index :questions, :title
   end
