@@ -13,10 +13,24 @@
 ActiveRecord::Schema.define(version: 20200615083528) do
 
   create_table "answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string  "answer",      null: false
-    t.string  "explain",     null: false
+    t.string  "answer",                          null: false
+    t.text    "answer_image",      limit: 65535
+    t.string  "explain",                         null: false
     t.string  "genre"
     t.integer "question_id"
+    t.string  "four_select1"
+    t.text    "four_image1",       limit: 65535
+    t.string  "four_select2"
+    t.text    "four_image2",       limit: 65535
+    t.string  "four_select3"
+    t.text    "four_image3",       limit: 65535
+    t.string  "sort_select1"
+    t.text    "sort_image1",       limit: 65535
+    t.string  "sort_select2"
+    t.text    "sort_image2",       limit: 65535
+    t.string  "sort_select3"
+    t.text    "sort_image3",       limit: 65535
+    t.text    "description_image", limit: 65535
     t.index ["question_id"], name: "index_answers_on_question_id", using: :btree
   end
 
@@ -24,18 +38,6 @@ ActiveRecord::Schema.define(version: 20200615083528) do
     t.integer "user_id"
     t.integer "question_id"
     t.text    "comment",     limit: 65535
-  end
-
-  create_table "descriptions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string  "answer"
-    t.integer "answer_id"
-    t.text    "image",     limit: 65535
-  end
-
-  create_table "fours", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string  "select"
-    t.integer "answer_id"
-    t.text    "image",     limit: 65535
   end
 
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -54,12 +56,6 @@ ActiveRecord::Schema.define(version: 20200615083528) do
     t.integer "user_id"
     t.integer "question_id"
     t.string  "rate"
-  end
-
-  create_table "sorts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string  "select"
-    t.integer "answer_id"
-    t.text    "image",     limit: 65535
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

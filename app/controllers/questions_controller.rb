@@ -21,14 +21,10 @@ class QuestionsController < ApplicationController
     
     @question = Question.new(session["question.data"]["question"])
     @answer = Answer.new(answer_params)
-
-    @answer.fours.build
-
     unless @answer.valid?
       flash.now[:alert] = @answer.errors.messages
       render :new_answer and return
     end
-    
     @question.build_answer(@answer.attributes)
     @question.save
     session["question.data"].clear
@@ -49,17 +45,7 @@ class QuestionsController < ApplicationController
       :answer,
       :explain,
       :genre,
-      :question_id,
-      fours_attributes: [:id, :answer_id, :select, :image]
+      :question_id
       )
   end
-
-  # def four_params
-  #   params.require(:four).permit(
-  #     :answer_id,
-  #     :select,
-  #     :image
-  #   )
-  # end
-
 end
