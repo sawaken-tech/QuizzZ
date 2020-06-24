@@ -31,7 +31,9 @@ class QuestionsController < ApplicationController
 
   end
 
+  
   private
+
   def question_params
     params.require(:question).permit(
       :title,
@@ -43,9 +45,23 @@ class QuestionsController < ApplicationController
   def answer_params
     params.require(:answer).permit(
       :answer,
+      :answer_image,
       :explain,
       :genre,
-      :question_id
+      :question_id,
+      :four_select1,
+      :four_image1,
+      :four_select2,
+      :four_image2,
+      :four_select3,
+      :four_image3,
+      :sort_select1,
+      :sort_image1,
+      :sort_select2,
+      :sort_image2,
+      :sort_select3,
+      :sort_image3,
+      :description_image
       )
   end
 end
