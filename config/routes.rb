@@ -10,6 +10,10 @@ Rails.application.routes.draw do
       get 'answer', to: 'questions#new_answer'
       post 'answer', to: 'questions#create_answer'
     end
+    member do
+      get 'slove', to: 'questions#slove'
+      get 'result', to: 'questions#result'
+    end
   end
 
   root to: "homes#index"

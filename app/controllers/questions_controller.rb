@@ -1,11 +1,24 @@
 class QuestionsController < ApplicationController
+  # 問題一覧表示
   def index
+    @questions = Question.all
   end
 
+  # 問題解く
+  def slove
+    @question = Question.find(params[:id])
+  end
+
+  # 問題結果
+  def result
+  end
+
+  # 問題作成
   def new
     @question = Question.new
   end
 
+  # 問題作成
   def create
     @question = Question.new(question_params)
     unless @question.valid?
@@ -17,8 +30,8 @@ class QuestionsController < ApplicationController
     render :new_answer
   end
 
+  # 問題作成
   def create_answer
-    
     @question = Question.new(session["question.data"]["question"])
     @answer = Answer.new(answer_params)
     unless @answer.valid?
@@ -28,7 +41,6 @@ class QuestionsController < ApplicationController
     @question.build_answer(@answer.attributes)
     @question.save
     session["question.data"].clear
-
   end
 
   
