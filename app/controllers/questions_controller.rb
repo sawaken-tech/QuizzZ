@@ -1,4 +1,7 @@
 class QuestionsController < ApplicationController
+
+  before_action :set_question, only: [:slove, :result]
+
   # 問題一覧表示
   def index
     @questions = Question.all
@@ -6,7 +9,6 @@ class QuestionsController < ApplicationController
 
   # 問題解く
   def slove
-    @question = Question.find(params[:id])
   end
 
   # 問題結果
@@ -76,4 +78,10 @@ class QuestionsController < ApplicationController
       :description_image
       )
   end
+
+  def set_question
+    @question = Question.find(params[:id])
+  end
+
+
 end

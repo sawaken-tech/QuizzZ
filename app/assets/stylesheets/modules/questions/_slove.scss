@@ -46,21 +46,27 @@
     }
     &__next {
       margin: 0 auto;
-      width: calc(90% + 20px);
-      color: white;
-      background-color: #ADD8E6;
-      border-radius: 10px;
       padding: 20px;
+      border-radius: 10px;
+      width: calc(90% + 20px);
       text-align: center;
+      background-color: #00BFFF;
+      box-shadow: 0 5px 0 #1E90FF;
       cursor: pointer;
-      box-shadow: 0 5px 0 #00BFFF;
+      a {
+        display: block;
+        text-decoration: none;
+        color: white;
+      }
     }
   }
 }
 #btn.disable {
-  color: #aaaaaa;
   background-color: #dddddd;
   box-shadow: 0 5px 0 #cccccc;
+  a {
+    color: #aaaaaa;
+  }
 }
 
 .correct {

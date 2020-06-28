@@ -17,14 +17,4 @@
       %li.slovePage__sloveBox__selectsBox__select.select
         = @question.answer.four_select3
     .slovePage__sloveBox__next#btn.disable
-      next
-
-  .slovePage__resultBox
-    .slovePage__resultBox__result
-      .slovePage__resultBox__result__correct
-        正解
-      .slovePage__resultBox__result__incorrect
-        不正解
-  .slovePage__next
-    .slovePage__next__btn
-      = link_to '答え', result_question_path(@question)
+      = link_to 'next', result_question_path(@question)
