@@ -5,21 +5,20 @@
     .slovePage__titleBox__title
       = @question.title
   .slovePage__sloveBox
-    .slovePage__sloveBox__sentence
+    .slovePage__sloveBox__sentence#question
       = @question.sentence
-    .slovePage__sloveBox__selecetsBox
-      .slovePage__sloveBox__selecetsBox__select
-        = radio_button_tag('select', 'answer')
-        = label_tag('select_answer', "#{@question.answer.answer}")
-      .slovePage__sloveBox__selecetsBox__select
-        = radio_button_tag('select', 'select1')
-        = label_tag('select_select1', "#{@question.answer.four_select1}")
-      .slovePage__sloveBox__selecetsBox__select
-        = radio_button_tag('select', 'select2')
-        = label_tag('select_select2', "#{@question.answer.four_select2}")
-      .slovePage__sloveBox__selecetsBox__select
-        = radio_button_tag('select', 'select3')
-        = label_tag('select_select3', "#{@question.answer.four_select3}")
+    %ul.slovePage__sloveBox__selectsBox#selects
+      %li.slovePage__sloveBox__selectsBox__select#answer
+        = @question.answer.answer
+      %li.slovePage__sloveBox__selectsBox__select.select
+        = @question.answer.four_select1
+      %li.slovePage__sloveBox__selectsBox__select.select
+        = @question.answer.four_select2
+      %li.slovePage__sloveBox__selectsBox__select.select
+        = @question.answer.four_select3
+    .slovePage__sloveBox__next#btn.disable
+      next
+
   .slovePage__resultBox
     .slovePage__resultBox__result
       .slovePage__resultBox__result__correct
