@@ -1,10 +1,18 @@
-%h1 Questions#index
-%p Find me in app/views/questions/index.html.haml
-
-
 - if user_signed_in?
-  ログインしています
-  = link_to "ログアウト", destroy_user_session_path, method: :delete
+  .questionsIndex
+    .questionsIndex__title
+      Questions
+  - @questions.each do |question| 
+    .questionsIndex__genreBox
+      = link_to "answer?", slove_question_path(question)
+      .questionsIndex__genreBox__title
+      .questionsIndex__genreBox__questionBox
+        .questionsIndex__genreBox__questionBox__name
+          = question.title
+        .questionsIndex__genreBox__questionBox__sentence
+          = question.sentence.truncate(20)
+
+
 - else
   ログインしていません
   = link_to "新規登録", new_user_registration_path

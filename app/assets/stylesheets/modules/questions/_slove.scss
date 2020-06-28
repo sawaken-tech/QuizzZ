@@ -1,0 +1,84 @@
+.slovePage {
+  @include color_background;
+  padding: 50px;
+  &__titleBox {
+    display: flex;
+    margin-bottom: 30px;
+    &__no {
+      padding: 10px;
+
+    }
+    &__title {
+      padding: 10px;
+    }
+  }
+  &__sloveBox {
+    padding: 10px;
+    &__sentence {
+      margin: 0 auto;
+      width: calc(90% + 20px);
+      background-color: white;
+      opacity: 0.7;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    &__selectsBox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      &__select {
+        box-sizing: border-box;
+        margin: 0 10px 20px 10px ;
+        border-radius: 10px;
+        width: 45%;
+        line-height: 80px;
+        background-color: white;
+        cursor: pointer;
+      }
+      &__select:hover {
+        background-color: #00BFFF;
+        color: white;
+        font-weight: bold;
+      }
+    }
+    &__next {
+      margin: 0 auto;
+      width: calc(90% + 20px);
+      color: white;
+      background-color: #ADD8E6;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 5px 0 #00BFFF;
+    }
+  }
+}
+#btn.disable {
+  color: #aaaaaa;
+  background-color: #dddddd;
+  box-shadow: 0 5px 0 #cccccc;
+}
+
+.correct {
+  border: 6px double #00FFFF;
+  font-size: 30px;
+}
+.correct::before {
+  content: '○  '
+}
+
+.incorrect {
+  border: 6px double #FF0000;
+  font-size: 30px;
+}
+.incorrect::before {
+  content: '✗  '
+}
+
+.hidden {
+  display: none;
+}
