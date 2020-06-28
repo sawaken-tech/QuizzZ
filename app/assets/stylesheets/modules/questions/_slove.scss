@@ -2,26 +2,26 @@
   @include color_background;
   padding: 50px;
   &__titleBox {
+    padding-left: 40px;
     display: flex;
-    margin-bottom: 30px;
+    font-size: 30px;
     &__no {
-      padding: 10px;
-
+      padding: 20px;
     }
     &__title {
-      padding: 10px;
+      padding: 20px;
     }
   }
   &__sloveBox {
     padding: 10px;
     &__sentence {
       margin: 0 auto;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 10px;
       width: calc(90% + 20px);
       background-color: white;
       opacity: 0.7;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 30px;
       font-weight: bold;
     }
     &__selectsBox {
