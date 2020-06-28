@@ -1,36 +1,39 @@
-.headder
-  .headder__title
-    QuizzZ
 .topPage
-  - if user_signed_in?
-    .topPage__mainLeft
-      .topPage__mainLeft__message
-        .topPage__mainLeft__message__up
-          Let's Play 「QuizzZ」
-        .topPage__mainLeft__message__down
-          .topPage__mainLeft__message__down__create
-            = link_to "Create", new_question_path(current_user)
-          .topPage__mainLeft__message__down__and
-            &
-          .topPage__mainLeft__message__down__slove
-            = link_to "Slove", questions_path
-    .topPage__mainRight
-      .topPage__mainRight__login
-        = link_to "Logout", destroy_user_session_path, method: :delete, class: 'topPage__mainRight__logout__btn'
-  - else
-    .topPage__mainLeft
-      .topPage__mainLeft__message
-        .topPage__mainLeft__message__up
-          Let's Play 「QuizzZ」
-        .topPage__mainLeft__message__down
-          .topPage__mainLeft__message__down__create
-            Create
-          .topPage__mainLeft__message__down__and
-            &
-          .topPage__mainLeft__message__down__slove
-            Slove
-    .topPage__mainRight
-      .topPage__mainRight__login
-        = link_to "Login", new_user_session_path, class: 'topPage__mainRight__login__btn'
-      .topPage__mainRight__newUser
-        = link_to "New", new_user_registration_path, class: 'topPage__mainRight__newUser__btn'
+  .topPage__top
+    .topPage__top__mainLeft
+      .topPage__top__mainLeft__message
+        .topPage__top__mainLeft__message__up
+          Let's Play
+        .topPage__top__mainLeft__message__down
+          QuizzZ
+      - if user_signed_in?
+        .topPage__top__mainLeft__logout
+          .topPage__top__mainLeft__logout__btn
+            = link_to "Logout", destroy_user_session_path, method: :delete
+      - else
+        .topPage__top__mainLeft__user
+          .topPage__top__mainLeft__user__btn
+            = link_to "New", new_user_registration_path
+        .topPage__top__mainLeft__login
+          .topPage__top__mainLeft__login__btn
+            = link_to "Login", new_user_session_path
+
+    .topPage__top__mainRight
+      .topPage__top__mainRight__topImg
+
+  .topPage__down
+    .topPage__down__left
+      .topPage__down__left__img
+      .topPage__down__left__message
+      .topPage__down__left__btn
+        = link_to "Create", new_question_path(current_user)
+    .topPage__down__center
+      .topPage__down__center__img
+      .topPage__down__center__message
+      .topPage__down__center__btn
+        = link_to "Slove", questions_path
+    .topPage__down__right
+      .topPage__down__right__img
+      .topPage__down__right__message
+      .topPage__down__right__btn
+        = link_to "Edit", "#"
