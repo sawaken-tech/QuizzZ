@@ -19,26 +19,40 @@
             .topPage__top__mainLeft__btnBox__login__btn
               = link_to "Login", new_user_session_path
 
-    .topPage__top__mainRight
-      .topPage__top__mainRight__topImg
-        = image_tag 'chemistry-2.png', alt: 'top-img', height: '300', width: '350', class: '.topPage__top__mainRight__topImg__img'
+    - if user_signed_in?
+      .topPage__top__mainRight
+        .topPage__top__mainRight__topImgLogin
+          = image_tag 'chemistry-2.png', alt: 'top-img', height: '300', width: '350', class: '.topPage__top__mainRight__topImgLogin__img'
+    - else
+      .topPage__top__mainRight
+        .topPage__top__mainRight__topImg
+          = image_tag 'chemistry-2.png', alt: 'top-img', height: '300', width: '350', class: '.topPage__top__mainRight__topImg__img'
 
   .topPage__down
     .topPage__down__left
-      .topPage__down__left__img
-        = image_tag 'potion-of-luck.png', alt: 'create-img', height: '120', width: '159'
-      .topPage__down__left__message
-      .topPage__down__left__btn
-        = link_to "Create", new_question_path(current_user)
+      = link_to new_question_path(current_user) do
+        .topPage__down__left__btn
+          Create
+        .topPage__down__left__img
+          = image_tag 'potion-of-luck.png', alt: 'create-img', height: '120', width: '159'
+        .topPage__down__left__message
+          First, let's make 
+          %br our own problem
     .topPage__down__center
-      .topPage__down__center__img
-        = image_tag 'mana-potion.png', alt: 'slove-img', height: '120', width: '143'
-      .topPage__down__center__message
-      .topPage__down__center__btn
-        = link_to "Slove", questions_path
+      = link_to questions_path do
+        .topPage__down__center__btn
+          Slove
+        .topPage__down__center__img
+          = image_tag 'mana-potion.png', alt: 'slove-img', height: '120', width: '143'
+        .topPage__down__center__message
+          Let's solve the problem
+          %br created by everyone
     .topPage__down__right
-      .topPage__down__right__img
-        = image_tag 'herbal-potion.png', alt: 'edit-img', height: '120', width: '147'
-      .topPage__down__right__message
-      .topPage__down__right__btn
-        = link_to "Edit", "#"
+      = link_to "" do
+        .topPage__down__right__btn
+          Edit
+        .topPage__down__right__img
+          = image_tag 'herbal-potion.png', alt: 'edit-img', height: '120', width: '147'
+        .topPage__down__right__message
+          Edit the problem
+          %br in some cases

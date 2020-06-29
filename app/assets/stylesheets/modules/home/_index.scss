@@ -6,12 +6,12 @@
   @include color_background;
   &__top {
     display: flex;
+    padding-bottom: 30px;
     border-bottom: 1px solid #eeeeee;
     &__mainLeft {
       letter-spacing: 3px;
       &__message {
         font-size: 80px;
-
         &__up {
         }
         &__down {
@@ -25,6 +25,7 @@
       &__btnBox {
         display: flex;
         &__user {
+          margin-right: 30px;
           &__btn {
             @include login_btn;
           }
@@ -38,7 +39,11 @@
     }
     &__mainRight {
       margin: 0 auto;
-      padding: 20px;
+      // padding: 20px;
+      &__topImgLogin {
+        &__img {
+        }
+      }
       &__topImg {
         filter: grayscale(100%);
         &__img {
@@ -50,22 +55,23 @@
     padding-top: 50px;
     display: flex;
     justify-content: space-around;
+    text-align: center;
     letter-spacing: 3px;
     &__left {
       filter: grayscale(100%);
       transition: 0.5s;
+      a {
+        text-decoration: none;
+        color: #FF6347;;
+      }
       &__img {
 
       }
       &__message {
-
+        @include top_message
       }
       &__btn {
         @include topdown_btn;
-        a {
-          text-decoration: none;
-          color: #FF8C00;
-        }
       }
     }
     &__left:hover {
@@ -74,18 +80,18 @@
     &__center {
       filter: grayscale(100%);
       transition: 0.5s;
+      a {
+        text-decoration: none;
+        color: #1E90FF;
+      }
       &__img {
 
       }
       &__message {
-
+        @include top_message
       }
       &__btn {
         @include topdown_btn;
-        a {
-          text-decoration: none;
-          color: #1E90FF;
-        }
       }
     }
     &__center:hover {
@@ -94,18 +100,18 @@
     &__right {
       filter: grayscale(100%);
       transition: 0.5s;
+      a {
+        text-decoration: none;
+        color: #9932CC;
+      }
       &__img {
 
       }
       &__message {
-
+        @include top_message
       }
       &__btn {
         @include topdown_btn;
-        a {
-          text-decoration: none;
-          color: #9932CC;
-        }
       }
     }
     &__right:hover {
