@@ -1,38 +1,59 @@
-.topPage {
-  &__top {
-    &__mainLeft {
-      &__message {
-        &__up {
+@import url('https://fonts.googleapis.com/css?family=Londrina+Shadow');
 
+.topPage {
+  padding: 50px;
+  font-family: 'Londrina Shadow', cursive;
+  @include color_background;
+  &__top {
+    display: flex;
+    border-bottom: 1px solid #eeeeee;
+    &__mainLeft {
+      letter-spacing: 3px;
+      &__message {
+        font-size: 80px;
+
+        &__up {
         }
         &__down {
-
         }
       }
       &__logout {
         &__btn {
-
+          @include login_btn;
         }
       }
-      &__user {
-        &__btn {
-
+      &__btnBox {
+        display: flex;
+        &__user {
+          &__btn {
+            @include login_btn;
+          }
         }
-      }
-      &__login {
-        &__btn {
-
+        &__login {
+          &__btn {
+            @include login_btn;
+          }
         }
       }
     }
     &__mainRight {
+      margin: 0 auto;
+      padding: 20px;
       &__topImg {
-
+        filter: grayscale(100%);
+        &__img {
+        }
       }
     }
   }
   &__down {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 3px;
     &__left {
+      filter: grayscale(100%);
+      transition: 0.5s;
       &__img {
 
       }
@@ -40,10 +61,19 @@
 
       }
       &__btn {
-        
+        @include topdown_btn;
+        a {
+          text-decoration: none;
+          color: #FF8C00;
+        }
       }
+    }
+    &__left:hover {
+      filter: grayscale(0);
     }
     &__center {
+      filter: grayscale(100%);
+      transition: 0.5s;
       &__img {
 
       }
@@ -51,10 +81,19 @@
 
       }
       &__btn {
-
+        @include topdown_btn;
+        a {
+          text-decoration: none;
+          color: #1E90FF;
+        }
       }
     }
+    &__center:hover {
+      filter: grayscale(0);
+    }
     &__right {
+      filter: grayscale(100%);
+      transition: 0.5s;
       &__img {
 
       }
@@ -62,8 +101,15 @@
 
       }
       &__btn {
-
+        @include topdown_btn;
+        a {
+          text-decoration: none;
+          color: #9932CC;
+        }
       }
+    }
+    &__right:hover {
+      filter: grayscale(0);
     }
   }
 }
