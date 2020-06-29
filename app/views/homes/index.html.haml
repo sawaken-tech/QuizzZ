@@ -1,36 +1,44 @@
-.headder
-  .headder__title
-    QuizzZ
 .topPage
-  - if user_signed_in?
-    .topPage__mainLeft
-      .topPage__mainLeft__message
-        .topPage__mainLeft__message__up
-          Let's Play 「QuizzZ」
-        .topPage__mainLeft__message__down
-          .topPage__mainLeft__message__down__create
-            = link_to "Create", new_question_path(current_user)
-          .topPage__mainLeft__message__down__and
-            &
-          .topPage__mainLeft__message__down__slove
-            = link_to "Slove", questions_path
-    .topPage__mainRight
-      .topPage__mainRight__login
-        = link_to "Logout", destroy_user_session_path, method: :delete, class: 'topPage__mainRight__logout__btn'
-  - else
-    .topPage__mainLeft
-      .topPage__mainLeft__message
-        .topPage__mainLeft__message__up
-          Let's Play 「QuizzZ」
-        .topPage__mainLeft__message__down
-          .topPage__mainLeft__message__down__create
-            Create
-          .topPage__mainLeft__message__down__and
-            &
-          .topPage__mainLeft__message__down__slove
-            Slove
-    .topPage__mainRight
-      .topPage__mainRight__login
-        = link_to "Login", new_user_session_path, class: 'topPage__mainRight__login__btn'
-      .topPage__mainRight__newUser
-        = link_to "New", new_user_registration_path, class: 'topPage__mainRight__newUser__btn'
+  .topPage__top
+    .topPage__top__mainLeft
+      .topPage__top__mainLeft__message
+        .topPage__top__mainLeft__message__up
+          Let's Play
+        .topPage__top__mainLeft__message__down
+          QuizzZ
+      - if user_signed_in?
+        .topPage__top__mainLeft__logout
+          .topPage__top__mainLeft__logout__btn
+            = link_to "Logout", destroy_user_session_path, method: :delete
+      - else
+        .topPage__top__mainLeft__btnBox
+          .topPage__top__mainLeft__btnBox__user
+            .topPage__top__mainLeft__btnBox__user__btn
+              = link_to "New", new_user_registration_path
+          .topPage__top__mainLeft__btnBox__login
+            .topPage__top__mainLeft__btnBox__login__btn
+              = link_to "Login", new_user_session_path
+
+    .topPage__top__mainRight
+      .topPage__top__mainRight__topImg
+        = image_tag 'chemistry-2.png', alt: 'top-img', height: '300', width: '350', class: '.topPage__top__mainRight__topImg__img'
+
+  .topPage__down
+    .topPage__down__left
+      .topPage__down__left__img
+        = image_tag 'potion-of-luck.png', alt: 'create-img', height: '120', width: '159'
+      .topPage__down__left__message
+      .topPage__down__left__btn
+        = link_to "Create", new_question_path(current_user)
+    .topPage__down__center
+      .topPage__down__center__img
+        = image_tag 'mana-potion.png', alt: 'slove-img', height: '120', width: '143'
+      .topPage__down__center__message
+      .topPage__down__center__btn
+        = link_to "Slove", questions_path
+    .topPage__down__right
+      .topPage__down__right__img
+        = image_tag 'herbal-potion.png', alt: 'edit-img', height: '120', width: '147'
+      .topPage__down__right__message
+      .topPage__down__right__btn
+        = link_to "Edit", "#"

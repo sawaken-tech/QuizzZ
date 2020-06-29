@@ -1,71 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Shadow');
+
 .topPage {
-  display: flex;
-  padding: 100px;
+  padding: 50px;
+  font-family: 'Londrina Shadow', cursive;
   @include color_background;
-  &__mainLeft {
-    margin: 0 auto;
-    padding: 100px 0;
-    &__message {
-      font-size: 50px;
-      font-weight: bold;
-      &__up {
+  &__top {
+    display: flex;
+    border-bottom: 1px solid #eeeeee;
+    &__mainLeft {
+      letter-spacing: 3px;
+      &__message {
+        font-size: 80px;
+
+        &__up {
+        }
+        &__down {
+        }
       }
-      &__down {
-        padding: 50px 0;
+      &__logout {
+        &__btn {
+          @include login_btn;
+        }
+      }
+      &__btnBox {
         display: flex;
-        &__create {
-          @include color_create;
+        &__user {
+          &__btn {
+            @include login_btn;
+          }
         }
-        &__and {
-          padding: 0 20px;
-          font-size: 40px;
-          line-height: 75px;
+        &__login {
+          &__btn {
+            @include login_btn;
+          }
         }
-        &__slove {
-          @include color_slove;
+      }
+    }
+    &__mainRight {
+      margin: 0 auto;
+      padding: 20px;
+      &__topImg {
+        filter: grayscale(100%);
+        &__img {
         }
       }
     }
   }
-  &__mainRight {
-    margin: 0 auto;
-    padding: 100px 0;
-    text-align: center;
-    color: #C0C0C0;
-    &__logout {
-      margin-bottom: 50px;
+  &__down {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 3px;
+    &__left {
+      filter: grayscale(100%);
+      transition: 0.5s;
+      &__img {
+
+      }
+      &__message {
+
+      }
       &__btn {
-        display: block;
-        width: 200px;
-        padding: 20px 40px;
-        border: 1px solid #000000;
-        border-radius: 10px;
-        background-color: white;
-        font-size: 30px;
+        @include topdown_btn;
+        a {
+          text-decoration: none;
+          color: #FF8C00;
+        }
       }
     }
-    &__login {
-      margin-bottom: 50px;
+    &__left:hover {
+      filter: grayscale(0);
+    }
+    &__center {
+      filter: grayscale(100%);
+      transition: 0.5s;
+      &__img {
+
+      }
+      &__message {
+
+      }
       &__btn {
-        display: block;
-        width: 200px;
-        padding: 20px 40px;
-        border: 1px solid #000000;
-        border-radius: 10px;
-        background-color: white;
-        font-size: 30px;
+        @include topdown_btn;
+        a {
+          text-decoration: none;
+          color: #1E90FF;
+        }
       }
     }
-    &__newUser {
-      &__btn {
-        display: block;
-        width: 200px;
-        padding: 20px 40px;
-        border: 1px solid #000000;
-        border-radius: 10px;
-        background-color: white;
-        font-size: 30px;
+    &__center:hover {
+      filter: grayscale(0);
+    }
+    &__right {
+      filter: grayscale(100%);
+      transition: 0.5s;
+      &__img {
+
       }
+      &__message {
+
+      }
+      &__btn {
+        @include topdown_btn;
+        a {
+          text-decoration: none;
+          color: #9932CC;
+        }
+      }
+    }
+    &__right:hover {
+      filter: grayscale(0);
     }
   }
 }
