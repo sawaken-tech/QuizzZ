@@ -9,6 +9,7 @@
     padding-bottom: 30px;
     border-bottom: 1px solid #eeeeee;
     &__mainLeft {
+      padding-left: 150px;
       letter-spacing: 3px;
       &__message {
         font-size: 80px;
@@ -38,8 +39,7 @@
       }
     }
     &__mainRight {
-      margin: 0 auto;
-      // padding: 20px;
+      padding-left: 200px;
       &__topImgLogin {
         &__img {
         }
