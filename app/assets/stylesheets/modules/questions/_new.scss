@@ -1,0 +1,45 @@
+.createPage {
+  @include color_background;
+  padding: 50px;
+  &__question {
+    font-size: 20px;
+    line-height: 40px;
+    &__formBox {
+      padding: 20px;
+      input, textarea, select {
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+      }
+      input:focus, textarea:focus, select:focus {
+        outline: 2px solid #FF8C00;
+      }
+      &__title {
+      }
+      &__form {
+      }
+      &__sentence {
+      }
+      &__form {
+        textarea {
+          height: 10rem;
+        }
+      }
+      &__format {
+
+      }
+      &__form {
+      }
+      &__btn {
+        padding: 5px 30px;
+        color: #FF8C00;
+      }
+      &__btn:hover {
+        background-color: #FF8C00;
+        color: white;
+        font-weight: bold;
+        transition: 0.5s;
+      }
+    }
+  }
+}

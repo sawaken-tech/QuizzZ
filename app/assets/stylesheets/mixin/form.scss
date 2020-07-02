@@ -11,3 +11,13 @@
     height: 40px;
   }
 }
+
+@mixin create_form {
+  display: flex;
+  line-height: 40px;
+}
+
+@mixin img_icon {
+  margin-left: 10px;
+  font-size: 3em;
+}

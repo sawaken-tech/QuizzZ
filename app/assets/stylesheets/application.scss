@@ -1,5 +1,7 @@
 @import "reset";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 @import "mixin/form";
 @import "mixin/color";
@@ -9,5 +11,7 @@
 
 @import "modules/user/user_create";
 
+@import "modules/questions/new";
+@import "modules/questions/new_answer";
 @import "modules/questions/slove";
 @import "modules/questions/result";

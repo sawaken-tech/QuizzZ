@@ -3,14 +3,20 @@
 .createPage
   .createPage__question
     = form_for @question do |f|
-      .createPage__question__title
-        = f.label :title, "Title"
-        = f.text_field :title
-      .createPage__question__sentence
-        = f.label :sentence, "Sentence"
-        = f.text_area :sentence
-      .createPage__question__format
-        = f.label :question_format, "Format"
-        = f.select :question_format, [['Four'], ['Sort'], ['Description']], { include_blank: true }
-      .createPage__question__btn
-        = f.submit "Next"
+      .createPage__question__formBox
+        .createPage__question__formBox__title
+          = f.label :title, "Title"
+        .createPage__question__formBox__form
+          = f.text_field :title, placeholder: "Title"
+      .createPage__question__formBox
+        .createPage__question__formBox__sentence
+          = f.label :sentence, "Sentence"
+        .createPage__question__formBox__form
+          = f.text_area :sentence, placeholder: "Sentence"
+      .createPage__question__formBox
+        .createPage__question__formBox__format
+          = f.label :question_format, "Format"
+        .createPage__question__formBox__form
+          = f.select :question_format, [['Four'], ['Sort'], ['Description']], { include_blank: true }
+      .createPage__question__formBox
+        = f.submit "Next", class: "createPage__question__formBox__btn"

@@ -3,38 +3,64 @@
 .createPage
   .createPage__answer
     = form_for @answer, url:answer_questions_path(@answer) do |f|
-      .createPage__answer__answerTitle
-        = f.label :answer, "Answer"
-        = f.text_field :answer
-      .createPage__answer__answerImage
-        = f.label :answer_image, "Image"
-        = f.file_field :answer_image
 
-      .createPage__answer__select
-        = f.label :four_select1, "Select"
-        = f.text_field :four_select1
-      .createPage__answer__image
-        = f.label :four_image1, "Image"
-        = f.file_field :four_image1
-      .createPage__answer__select
-        = f.label :four_select2, "Select"
-        = f.text_field :four_select2
-      .createPage__answer__image
-        = f.label :four_image2, "Image"
-        = f.file_field :four_image2
-      .createPage__answer__select
-        = f.label :four_select3, "Select"
-        = f.text_field :four_select3
-      .createPage__answer__image
-        = f.label :four_image3, "Image"
-        = f.file_field :four_image3
+      .createPage__answer__formBox
+        .createPage__answer__formBox__up
+          .createPage__answer__formBox__up__box
+            .createPage__answer__formBox__up__box__answerTitle
+              = f.label :answer, "Answer"
+            .createPage__answer__formBox__up__box__formImg
+              .createPage__answer__formBox__up__box__formImg__answerForm
+                = f.text_field :answer
+              .createPage__answer__formBox__up__box__formImg__answerImage
+                = f.label :answer_image, "Image" do
+                  = icon('fas', 'image')
+                  = f.file_field :answer_image, class: "hidden"
+
+          .createPage__answer__formBox__up__box
+            .createPage__answer__formBox__up__box__select
+              = f.label :four_select1, "Select"
+            .createPage__answer__formBox__up__box__formImg
+              .createPage__answer__formBox__up__box__formImg__form
+                = f.text_field :four_select1
+              .createPage__answer__formBox__up__box__formImg__image
+                = f.label :four_image1, "Image" do
+                  = icon('fas', 'image')
+                  = f.file_field :four_image1, class: "hidden"
+
+        .createPage__answer__formBox__down
+          .createPage__answer__formBox__down__box
+            .createPage__answer__formBox__down__box__select
+              = f.label :four_select2, "Select"
+            .createPage__answer__formBox__down__box__formImg
+              .createPage__answer__formBox__down__box__formImg__form
+                = f.text_field :four_select2
+              .createPage__answer__formBox__down__box__formImg__image
+                = f.label :four_image2, "Image" do
+                  = icon('fas', 'image')
+                  = f.file_field :four_image2, class: "hidden"
+
+          .createPage__answer__formBox__down__box
+            .createPage__answer__formBox__down__box__select
+              = f.label :four_select3, "Select"
+            .createPage__answer__formBox__down__box__formImg
+              .createPage__answer__formBox__down__box__formImg__form
+                = f.text_field :four_select3
+              .createPage__answer__formBox__down__box__formImg__image
+                = f.label :four_image3, "Image" do
+                  = icon('fas', 'image')
+                  = f.file_field :four_image3, class: "hidden"
 
 
-      .createPage__answer__explain
-        = f.label :explain, "Explain"
-        = f.text_area :explain
-      .createPage__answer__genre
-        = f.label :genre, "Genre"
-        = f.select :genre, [['test0'], ['test1'], ['test2']], { include_blank: true }
-      .createPage__question__btn
-        = f.submit "Next"
+      .createPage__answer__formBox
+        .createPage__answer__formBox__explain
+          = f.label :explain, "Explain"
+        .createPage__answer__formBox__explainForm
+          = f.text_area :explain
+      .createPage__answer__formBox
+        .createPage__answer__formBox__genre
+          = f.label :genre, "Genre"
+        .createPage__answer__formBox__genreForm
+          = f.select :genre, [['test0'], ['test1'], ['test2']], { include_blank: true }
+      .createPage__question__formBox
+        = f.submit "Next", class: "createPage__question__formBox__btn"
