@@ -2,10 +2,10 @@
   @include color_background;
   padding: 50px;
   &__question {
-    font-size: 20px;
+    font-size: 15px;
     line-height: 40px;
     &__formBox {
-      padding: 20px;
+      padding: 20px 200px;
       input, textarea, select {
         width: 100%;
         border: none;
@@ -26,9 +26,11 @@
         }
       }
       &__format {
-
       }
       &__form {
+        select {
+          height: 40px;
+        }
       }
       &__btn {
         padding: 5px 30px;
