@@ -22,10 +22,10 @@
       }
       &__questionBox {
         padding: 5px;
-        background-color: #00BFFF;
-        box-shadow: 3px 5px 2px #1E90FF;
+        background-color: white;
+        box-shadow: 2px 2px 2px #1E90FF;
         border-radius: 5px;
-        color: white;
+        color: #00BFFF;
         &__name {
         }
         &__sentence {
@@ -36,10 +36,10 @@
       }
       &__questionBox:hover {
         font-weight: bold;
-        background-color: white;
+        background-color: #00BFFF;
         box-shadow: 3px 5px 2px #1E90FF;
         border-radius: 5px;
-        color: #00BFFF;
+        color: white;
         transition: 0.3s;
       }
     }

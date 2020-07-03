@@ -1,76 +1,77 @@
-.createPage__answer {
-  font-size: 15px;
-  line-height: 40px;
-  &__formBox {
-    padding: 20px 200px;
-    input, textarea, select {
-      width: 100%;
-      border: none;
-      border-radius: 5px;
-    }
-    input:focus, textarea:focus, select:focus {
-      outline: 2px solid #FF8C00;
-    }
-    &__up {
-      display: flex;
-      justify-content: center;
-      &__box {
-        margin: 0 10px 20px 10px;
-        &__answerTitle {
-        }
-        &__formImg {
-          @include create_form;
-          &__answerForm {
-            @include form_size;
+.createPage {
+  &__answer {
+    font-size: 15px;
+    line-height: 40px;
+    &__formBox {
+      padding: 20px 200px;
+      input, textarea, select {
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+      }
+      input:focus, textarea:focus, select:focus {
+        outline: 2px solid #FF8C00;
+      }
+      &__up {
+        display: flex;
+        justify-content: center;
+        &__box {
+          margin: 0 10px 20px 10px;
+          &__answerTitle {
           }
-          &__answerImage {
-            @include img_icon;
+          &__formImg {
+            @include create_form;
+            &__answerForm {
+              @include form_size;
+            }
+            &__answerImage {
+              @include img_icon;
+            }
           }
-        }
-        &__select {
-        }
-        &__formImg {
-          @include create_form;
-          &__form {
-            @include form_size;
+          &__select {
           }
-          &__image {
-            @include img_icon;
+          &__formImg {
+            @include create_form;
+            &__form {
+              @include form_size;
+            }
+            &__image {
+              @include img_icon;
+            }
           }
         }
       }
-    }
-    &__down {
-      display: flex;
-      justify-content: center;
-      &__box {
-        margin: 0 10px 20px 10px;
-        &__select {
-        }
-        &__formImg {
-          @include create_form;
-          &__form {
-            @include form_size;
+      &__down {
+        display: flex;
+        justify-content: center;
+        &__box {
+          margin: 0 10px 20px 10px;
+          &__select {
           }
-          &__image {
-            @include img_icon;
+          &__formImg {
+            @include create_form;
+            &__form {
+              @include form_size;
+            }
+            &__image {
+              @include img_icon;
+            }
           }
         }
       }
-    }
-    &__explain {
-    }
-    &__explainForm {
-      textarea {
-        height: 10rem;
+      &__explain {
       }
-    }
-    &__genre {
-
-    }
-    &__genreForm {
-      select {
-        height: 40px;
+      &__explainForm {
+        textarea {
+          height: 10rem;
+        }
+      }
+      &__genre {
+      }
+      &__genreForm {
+        select {
+          height: 40px;
+        }
       }
     }
   }
