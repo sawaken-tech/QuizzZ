@@ -1,0 +1,22 @@
+.createPage__comp {
+  &__box {
+    margin: 100px;
+    text-align: center;
+    font-size: 30px;
+    a {
+      padding: 50px;
+      border-radius: 5px;
+      background-color: white;
+      display: block;
+      color: #FF8C00;
+      text-decoration: none;
+    }
+    a:hover {
+      border-radius: 20px;
+      background-color: #FF8C00;
+      color: white;
+      font-weight: bold;
+      transition: 0.5s;
+    }
+  }
+}

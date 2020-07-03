@@ -2,16 +2,20 @@
   .questionsIndex
     .questionsIndex__title
       Questions
-  - @questions.each do |question| 
-    .questionsIndex__genreBox
-      = link_to "answer?", slove_question_path(question)
-      .questionsIndex__genreBox__title
-      .questionsIndex__genreBox__questionBox
-        .questionsIndex__genreBox__questionBox__name
-          = question.title
-        .questionsIndex__genreBox__questionBox__sentence
-          = question.sentence.truncate(20)
+    .questionsIndex__container
+      - @questions.each do |question| 
+        .questionsIndex__container__box
+          .questionsIndex__container__box__title
+            No#{question.id}
+          = link_to slove_question_path(question) do
+            .questionsIndex__container__box__questionBox
+              .questionsIndex__container__box__questionBox__name
+                = question.title
+              .questionsIndex__container__box__questionBox__sentence
+                = question.sentence
 
+  = link_to root_path do
+    Go to Top
 
 - else
   ログインしていません
