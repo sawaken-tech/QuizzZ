@@ -1,0 +1,32 @@
+.footer
+  .footer__topBox
+    .footer__topBox__container
+      = link_to "#" do
+        .footer__topBox__container__title
+          = icon('fas', 'question')
+          What's
+    .footer__topBox__container
+      = link_to "#" do
+        .footer__topBox__container__title
+          = icon('far', 'envelope')
+          Contact
+    .footer__topBox__container
+      = link_to "#" do
+        .footer__topBox__container__title
+          = icon('far', 'comments')
+          FAQ
+  .footer__downBox
+    .footer__downBox__container
+      .footer__downBox__container__title
+        = link_to root_path do
+          QuizzZ
+      .footer__downBox__container__icons
+        .footer__downBox__container__icons__twitter
+          = link_to "#" do
+            = icon('fab', 'twitter-square')
+        .footer__downBox__container__icons__facebook
+          = link_to "#" do
+            = icon('fab', 'facebook-square')
+        .footer__downBox__container__icons__line
+          = link_to "#" do
+            = icon('fab', 'line')

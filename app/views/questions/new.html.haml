@@ -1,3 +1,5 @@
+= render 'homes/header'
+
 - flash.each do |key, value|
   = content_tag :div, value, class: key
 .createPage
@@ -20,3 +22,5 @@
           = f.select :question_format, [['Four'], ['Sort'], ['Description']], { include_blank: true }
       .createPage__question__formBox
         = f.submit "Next", class: "createPage__question__formBox__btn"
+
+= render 'homes/footer'

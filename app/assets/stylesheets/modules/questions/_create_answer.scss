@@ -6,15 +6,13 @@
     a {
       padding: 20px;
       border-radius: 5px;
-      background-color: white;
+      background-color: #777777;
       display: block;
-      color: #777777;
+      color: white;
       text-decoration: none;
     }
     a:hover {
       border-radius: 20px;
-      background-color: #777777;
-      color: white;
       font-weight: bold;
       transition: 0.5s;
     }
@@ -28,15 +26,13 @@
     a {
       padding: 20px;
       border-radius: 5px;
-      background-color: white;
+      background-color: #FF8C00;
       display: block;
-      color: #FF8C00;
+      color: white;
       text-decoration: none;
     }
     a:hover {
       border-radius: 20px;
-      background-color: #FF8C00;
-      color: white;
       font-weight: bold;
       transition: 0.5s;
     }

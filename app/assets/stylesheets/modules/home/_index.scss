@@ -6,6 +6,7 @@
   @include color_background;
   &__top {
     display: flex;
+    justify-content: space-around;
     padding-bottom: 30px;
     border-bottom: 1px solid #eeeeee;
     &__mainLeft {
@@ -13,14 +14,10 @@
       letter-spacing: 3px;
       &__message {
         font-size: 80px;
+        line-height: 160px;
         &__up {
         }
         &__down {
-        }
-      }
-      &__logout {
-        &__btn {
-          @include login_btn;
         }
       }
       &__btnBox {
@@ -117,22 +114,5 @@
     &__right:hover {
       filter: grayscale(0);
     }
-  }
-}
-
-.topBtn {
-  &__img {
-    border: 1px solid #777777;
-    border-radius: 10px;
-    box-shadow: 4px 4px 0 #777777;
-    background-color: #c0c0c0;
-    width: 70px;
-    height: 70px;
-    text-align: center;
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    font-size: 50px;
-    color: white;
   }
 }

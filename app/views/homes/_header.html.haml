@@ -1,0 +1,18 @@
+.header
+  .header__title
+    = link_to root_path do
+      QuizzZ
+  .header__rightBox
+    - if user_signed_in?
+      .header__rightBox__mypage
+        = link_to "#" do
+          .header__rightBox__mypage__icon
+            = icon('fas', 'laptop')
+          .header__rightBox__mypage__name
+            mypage
+      .header__rightBox__logout
+        = link_to destroy_user_session_path, method: :delete do
+          .header__rightBox__logout__icon
+            = icon('fas', 'door-open')
+          .header__rightBox__logout__name
+            logout

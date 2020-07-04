@@ -1,3 +1,5 @@
+= render 'homes/header'
+
 - flash.each do |key, value|
   = content_tag :div, value, class: key
 .createPage
@@ -51,7 +53,6 @@
                   = icon('fas', 'image')
                   = f.file_field :four_image3, class: "hidden"
 
-
       .createPage__answer__formBox
         .createPage__answer__formBox__explain
           = f.label :explain, "Explain"
@@ -64,3 +65,5 @@
           = f.select :genre, [['test0'], ['test1'], ['test2']], { include_blank: true }
       .createPage__question__formBox
         = f.submit "Next", class: "createPage__question__formBox__btn"
+
+= render 'homes/footer'

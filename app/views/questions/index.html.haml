@@ -1,3 +1,4 @@
+= render 'homes/header'
 - if user_signed_in?
   .questionsIndex
     .questionsIndex__title
@@ -14,9 +15,9 @@
               .questionsIndex__container__box__questionBox__sentence
                 = question.sentence
 
-    = render 'homes/backTop'
-
 - else
   ログインしていません
   = link_to "新規登録", new_user_registration_path
   = link_to "ログイン", new_user_session_path
+
+= render 'homes/footer'
