@@ -1,0 +1,27 @@
+= render 'homes/header'
+- if user_signed_in?
+  .questionsIndex
+    .questionsIndex__title
+      Questions
+    .questionsIndex__container
+      - current_user.questions.each do |question| 
+        .questionsIndex__container__box
+          .questionsIndex__container__box__title
+            No#{question.id}
+          .questionsIndex__container__box__questionBox
+            .questionsIndex__container__box__questionBox__name
+              = question.title
+            .questionsIndex__container__box__questionBox__sentence
+              = question.sentence
+          .questionsIndex__container__box__btn
+            .questionsIndex__container__box__btn__edit
+              = link_to "edit", edit_question_path(question)
+            .questionsIndex__container__box__btn__delete
+              = link_to "delete"
+
+- else
+  ログインしていません
+  = link_to "新規登録", new_user_registration_path
+  = link_to "ログイン", new_user_session_path
+
+= render 'homes/footer'

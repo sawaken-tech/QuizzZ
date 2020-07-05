@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-  before_action :set_question, only: [:slove, :result]
+  before_action :set_question, only: [:slove, :result, :edit]
 
   # 問題一覧表示
   def index
@@ -43,6 +43,14 @@ class QuestionsController < ApplicationController
     @question.build_answer(@answer.attributes)
     @question.save
     session["question.data"].clear
+  end
+
+  # 作成問題一覧
+  def index_edit
+  end
+
+  # 問題編集 
+  def edit
   end
 
   
