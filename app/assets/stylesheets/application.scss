@@ -6,6 +6,7 @@
 @import "mixin/form";
 @import "mixin/color";
 @import "mixin/btn";
+@import "mixin/question_index";
 
 @import "modules/home/index";
 @import "modules/home/header-footer";
@@ -18,3 +19,4 @@
 @import "modules/questions/index";
 @import "modules/questions/slove";
 @import "modules/questions/result";
+@import "modules/questions/index_edit";

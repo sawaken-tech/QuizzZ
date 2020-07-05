@@ -1,22 +1,23 @@
 = render 'homes/header'
 - if user_signed_in?
-  .questionsIndex
-    .questionsIndex__title
+  .questionsIndexEdit
+    .questionsIndexEdit__title
       Questions
-    .questionsIndex__container
+    .questionsIndexEdit__container
       - current_user.questions.each do |question| 
-        .questionsIndex__container__box
-          .questionsIndex__container__box__title
+        .questionsIndexEdit__container__box
+          .questionsIndexEdit__container__box__title
             No#{question.id}
-          .questionsIndex__container__box__questionBox
-            .questionsIndex__container__box__questionBox__name
+          .questionsIndexEdit__container__box__questionBox
+            .questionsIndexEdit__container__box__questionBox__name
               = question.title
-            .questionsIndex__container__box__questionBox__sentence
+            .questionsIndexEdit__container__box__questionBox__sentence
               = question.sentence
-          .questionsIndex__container__box__btn
-            .questionsIndex__container__box__btn__edit
+              
+          .questionsIndexEdit__container__box__btn
+            .questionsIndexEdit__container__box__btn__edit
               = link_to "edit", edit_question_path(question)
-            .questionsIndex__container__box__btn__delete
+            .questionsIndexEdit__container__box__btn__delete
               = link_to "delete"
 
 - else

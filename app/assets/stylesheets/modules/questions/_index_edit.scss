@@ -1,9 +1,9 @@
-.questionsIndex {
+.questionsIndexEdit {
   @include color_background;
   padding: 40px;
   &__title{
     @include index_title;
-    color: #00BFFF;
+    color: #9932CC;
     text-shadow: 1px 2px 0 white;
   }
   &__container {
@@ -20,8 +20,8 @@
       &__questionBox {
         @include index_questionBox;
         background-color: white;
-        box-shadow: 2px 2px 2px #1E90FF;
-        color: #00BFFF;
+        box-shadow: 2px 2px 2px #9932CC;
+        color: #9370DB;
         &__name {
         }
         &__sentence {
@@ -32,8 +32,8 @@
       }
       &__questionBox:hover {
         font-weight: bold;
-        background-color: #00BFFF;
-        box-shadow: 3px 5px 2px #1E90FF;
+        background-color: #9370DB;
+        box-shadow: 3px 5px 2px #9932CC;
         border-radius: 5px;
         color: white;
         transition: 0.3s;
