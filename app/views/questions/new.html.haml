@@ -1,8 +1,6 @@
 = render 'homes/header'
 
 - if user_signed_in?
-  - flash.each do |key, value|
-    = content_tag :div, value, class: key
   .createPage
     .createPage__question
       = form_for @question do |f|
@@ -25,8 +23,6 @@
           = f.submit "Next", class: "createPage__question__formBox__btn"
 
 - else
-  ログインしていません
-  = link_to "新規登録", new_user_registration_path
-  = link_to "ログイン", new_user_session_path
+  = render 'login_view'
 
 = render 'homes/footer'

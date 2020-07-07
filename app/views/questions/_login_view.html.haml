@@ -1,0 +1,10 @@
+.loginView
+  .loginView__message
+    新規登録もしくはログインしてください
+  .loginView__box
+    .loginView__box__newBox
+      = link_to "New", new_user_registration_path
+    .loginView__box__or
+      OR
+    .loginView__box__loginBox
+      = link_to "Login", new_user_session_path

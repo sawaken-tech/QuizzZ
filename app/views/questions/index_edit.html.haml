@@ -13,7 +13,7 @@
               = question.title
             .questionsIndexEdit__container__box__questionBox__sentence
               = question.sentence
-              
+
           .questionsIndexEdit__container__box__btn
             .questionsIndexEdit__container__box__btn__edit
               = link_to "edit", edit_question_path(question)
@@ -21,8 +21,6 @@
               = link_to "delete"
 
 - else
-  ログインしていません
-  = link_to "新規登録", new_user_registration_path
-  = link_to "ログイン", new_user_session_path
-
+  = render 'login_view'
+  
 = render 'homes/footer'

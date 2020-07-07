@@ -1,7 +1,5 @@
 = render 'homes/header'
 
-- flash.each do |key, value|
-  = content_tag :div, value, class: key
 .createPage
   .createPage__answer
     = form_for @answer, url:answer_questions_path(@answer) do |f|

@@ -1,0 +1,28 @@
+.loginView {
+  @include color_background;
+  padding: 100px;
+  text-align: center;
+  &__message {
+    color: #777777;
+    font-size: 20px;
+  }
+  &__box {
+    &__newBox {
+      @include login_btn;
+      margin: 20px 100px;
+      a {
+        padding: 30px 50px;
+      }
+    }
+    &__or {
+      font-size: 20px;
+    }
+    &__loginBox {
+      @include login_btn;
+      margin: 20px 100px;
+      a {
+        padding: 30px 50px;
+      }
+    }
+  }
+}
