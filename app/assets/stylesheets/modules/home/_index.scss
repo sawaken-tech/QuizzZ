@@ -13,11 +13,16 @@
       padding-left: 50px;
       letter-spacing: 3px;
       &__message {
-        font-size: 80px;
-        line-height: 160px;
-        &__up {
+        &__en {
+          margin-bottom: 10px;
+          border-bottom: 1px solid #aaaaaa;
+          font-size: 60px;
         }
-        &__down {
+        &__ja {
+          padding-left: 10px;
+          color: #777777;
+          font-size: 16px;
+          line-height: 2em;
         }
       }
       &__btnBox {
@@ -69,6 +74,12 @@
       }
       &__btn {
         @include topdown_btn;
+        &__en {
+        }
+        &__ja {
+          padding-bottom: 10px;
+          font-size: 15px;
+        }
       }
     }
     &__left:hover {
@@ -89,6 +100,12 @@
       }
       &__btn {
         @include topdown_btn;
+        &__en {
+        }
+        &__ja {
+          padding-bottom: 10px;
+          font-size: 15px;
+        }
       }
     }
     &__center:hover {
@@ -109,6 +126,12 @@
       }
       &__btn {
         @include topdown_btn;
+        &__en {
+        }
+        &__ja {
+          padding-bottom: 10px;
+          font-size: 15px;
+        }
       }
     }
     &__right:hover {

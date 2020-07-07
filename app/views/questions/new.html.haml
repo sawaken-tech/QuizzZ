@@ -1,26 +1,32 @@
 = render 'homes/header'
 
-- flash.each do |key, value|
-  = content_tag :div, value, class: key
-.createPage
-  .createPage__question
-    = form_for @question do |f|
-      .createPage__question__formBox
-        .createPage__question__formBox__title
-          = f.label :title, "Title"
-        .createPage__question__formBox__form
-          = f.text_field :title, placeholder: "Title"
-      .createPage__question__formBox
-        .createPage__question__formBox__sentence
-          = f.label :sentence, "Sentence"
-        .createPage__question__formBox__form
-          = f.text_area :sentence, placeholder: "Sentence"
-      .createPage__question__formBox
-        .createPage__question__formBox__format
-          = f.label :question_format, "Format"
-        .createPage__question__formBox__form
-          = f.select :question_format, [['Four'], ['Sort'], ['Description']], { include_blank: true }
-      .createPage__question__formBox
-        = f.submit "Next", class: "createPage__question__formBox__btn"
+- if user_signed_in?
+  - flash.each do |key, value|
+    = content_tag :div, value, class: key
+  .createPage
+    .createPage__question
+      = form_for @question do |f|
+        .createPage__question__formBox
+          .createPage__question__formBox__title
+            = f.label :title, "Title"
+          .createPage__question__formBox__form
+            = f.text_field :title, placeholder: "Title"
+        .createPage__question__formBox
+          .createPage__question__formBox__sentence
+            = f.label :sentence, "Sentence"
+          .createPage__question__formBox__form
+            = f.text_area :sentence, placeholder: "Sentence"
+        .createPage__question__formBox
+          .createPage__question__formBox__format
+            = f.label :question_format, "Format"
+          .createPage__question__formBox__form
+            = f.select :question_format, [['Four'], ['Sort'], ['Description']], { include_blank: true }
+        .createPage__question__formBox
+          = f.submit "Next", class: "createPage__question__formBox__btn"
+
+- else
+  ログインしていません
+  = link_to "新規登録", new_user_registration_path
+  = link_to "ログイン", new_user_session_path
 
 = render 'homes/footer'

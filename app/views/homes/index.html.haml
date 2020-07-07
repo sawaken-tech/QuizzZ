@@ -3,19 +3,15 @@
   .topPage__top
     .topPage__top__mainLeft
       .topPage__top__mainLeft__message
-        .topPage__top__mainLeft__message__up
+        .topPage__top__mainLeft__message__en
           Let's Play
-        .topPage__top__mainLeft__message__down
-          QuizzZ
-      - if user_signed_in?
-      - else
-        .topPage__top__mainLeft__btnBox
-          .topPage__top__mainLeft__btnBox__user
-            .topPage__top__mainLeft__btnBox__user__btn
-              = link_to "New", new_user_registration_path
-          .topPage__top__mainLeft__btnBox__login
-            .topPage__top__mainLeft__btnBox__login__btn
-              = link_to "Login", new_user_session_path
+          %br QuizzZ
+        .topPage__top__mainLeft__message__ja
+          学んだことを問題で出題しアウトプット
+          %br
+          みんなに問題を解いてもらい
+          %br
+          みんなの問題を解いてみよう
 
     - if user_signed_in?
       .topPage__top__mainRight
@@ -30,29 +26,38 @@
     .topPage__down__left
       = link_to new_question_path(current_user) do
         .topPage__down__left__btn
-          Create
+          .topPage__down__left__btn__en
+            Create
+          .topPage__down__left__btn__ja
+            〜問題を作る〜
         .topPage__down__left__img
           = image_tag 'potion-of-luck.png', alt: 'create-img', height: '120', width: '159'
         .topPage__down__left__message
-          First, let's make 
-          %br our own problem
+          Let's give a QuizzZ
+          %br the first thing we learned
     .topPage__down__center
       = link_to questions_path do
         .topPage__down__center__btn
-          Slove
+          .topPage__down__center__btn__en
+            Slove
+          .topPage__down__center__btn__ja
+            〜問題を解く〜
         .topPage__down__center__img
           = image_tag 'mana-potion.png', alt: 'slove-img', height: '120', width: '143'
         .topPage__down__center__message
-          Let's solve the problem
+          Let's solve the QuizzZ
           %br created by everyone
     .topPage__down__right
       = link_to index_edit_questions_path do
         .topPage__down__right__btn
-          Edit
+          .topPage__down__right__btn__en
+            Edit
+          .topPage__down__right__btn__ja
+            〜問題を編集する〜
         .topPage__down__right__img
           = image_tag 'herbal-potion.png', alt: 'edit-img', height: '120', width: '147'
         .topPage__down__right__message
-          Edit the problem
+          Edit the QuizzZ
           %br in some cases
 
 = render 'footer'

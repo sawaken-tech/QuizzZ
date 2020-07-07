@@ -16,3 +16,11 @@
             = icon('fas', 'door-open')
           .header__rightBox__logout__name
             logout
+    - else
+      .topPage__top__mainLeft__btnBox
+        .topPage__top__mainLeft__btnBox__user
+          .topPage__top__mainLeft__btnBox__user__btn
+            = link_to "New", new_user_registration_path
+        .topPage__top__mainLeft__btnBox__login
+          .topPage__top__mainLeft__btnBox__login__btn
+            = link_to "Login", new_user_session_path
