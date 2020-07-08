@@ -1,21 +1,23 @@
 = render 'homes/header'
 
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.loginPage
+  .loginPage__main
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .loginPage__main__box
+        .loginPage__main__box__formbox
+          .loginPage__main__box__formbox__title
+            = f.label :email, "email"
+          .loginPage__main__box__formbox__form
+            = f.email_field :email, autofocus: true, autocomplete: "email"
+        
+        .loginPage__main__box__formbox
+          .loginPage__main__box__formbox__title
+            = f.label :password, "password"
+          .loginPage__main__box__formbox__form
+            = f.password_field :password, autocomplete: "current-password"
+      
+      .loginPage__main__login
+        .loginPage__main__login__btn
+          = f.submit "Log in"
 
 = render 'homes/footer'

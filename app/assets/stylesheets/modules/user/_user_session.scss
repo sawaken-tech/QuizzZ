@@ -1,14 +1,14 @@
-// 新規登録画面
-.userCreate {
+.loginPage {
   @include color_background;
   padding: 100px;
   &__main {
-    background-color: #EEEEEE;
     width: 700px;
     margin: 0 auto;
+    padding-top: 20px;
     @include border_frame;
+    background-color: #EEEEEE;
     text-align: center;
-    &__up {
+    &__box {
       display: flex;
       justify-content: center;
       &__formbox {
@@ -21,21 +21,7 @@
         }
       }
     }
-    &__down {
-      display: flex;
-      justify-content: center;
-      &__formbox {
-        padding: 20px;
-        &__title {
-          @include title_form;
-        }
-        &__form {
-          @include form_size;
-        }
-      }
-    }
-    
-    &__submit {
+    &__login {
       padding: 10px;
       &__btn {
         input {
@@ -47,7 +33,7 @@
           background-color: white;
         }
         input:hover {
-          background-color: #C0C0C0;
+          background-color: #c0c0c0;
         }
       }
     }
