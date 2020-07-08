@@ -1,11 +1,26 @@
 .createPage {
   @include color_background;
-  padding: 50px;
+  padding-top: 30px;
+  &__title {
+    margin: 0 auto;
+    background-color: #FF8C00;
+    color: white;
+    text-align: center;
+    &__en {
+      font-size: 20px;
+    }
+    &__ja {
+      font-size: 15px;
+    }
+  }
   &__question {
+    padding: 50px;
     font-size: 15px;
     line-height: 40px;
     &__formBox {
-      padding: 20px 200px;
+      margin:  0 auto;
+      padding: 20px 0;
+      width: 400px;
       input, textarea, select {
         width: 100%;
         border: none;
@@ -17,6 +32,7 @@
       &__title {
       }
       &__form {
+        
       }
       &__sentence {
       }
@@ -33,14 +49,10 @@
         }
       }
       &__btn {
-        padding: 5px 30px;
-        color: #FF8C00;
+        @include new_question_btn;
       }
       &__btn:hover {
-        background-color: #FF8C00;
-        color: white;
-        font-weight: bold;
-        transition: 0.5s;
+        @include new_question_btn_hover;
       }
     }
   }

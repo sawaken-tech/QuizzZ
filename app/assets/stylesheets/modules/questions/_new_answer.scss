@@ -1,9 +1,12 @@
 .createPage {
   &__answer {
+    padding: 50px;
     font-size: 15px;
     line-height: 40px;
     &__formBox {
-      padding: 20px 200px;
+      margin: 0 auto;
+      padding: 20px 0;
+      width: 550px;
       input, textarea, select {
         width: 100%;
         border: none;
@@ -72,6 +75,12 @@
         select {
           height: 40px;
         }
+      }
+      &__btn {
+        @include new_question_btn;
+      }
+      &__btn:hover {
+        @include new_question_btn_hover;
       }
     }
   }

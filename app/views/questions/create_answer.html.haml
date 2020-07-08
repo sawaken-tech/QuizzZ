@@ -1,15 +1,19 @@
 = render 'homes/header'
 .createPage
+  .createPage__createTitle
+    Create!!
   .createPage__comp
     .createPage__comp__box
       = link_to root_path do
-        Create!!
-        %br
-        Go to Top
+        .createPage__comp__box__en
+          Go to Top
+        .createPage__comp__box__ja
+          トップページへ
   .createPage__next
     .createPage__next__box
       = link_to new_question_path do
-        Create!!
-        %br
-        Next Question!!
+        .createPage__next__box__en
+          Create more
+        .createPage__next__box__ja
+          もっと問題を作る
 = render 'homes/footer'

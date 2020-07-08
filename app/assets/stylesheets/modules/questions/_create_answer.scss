@@ -1,11 +1,19 @@
+.createPage__createTitle {
+  margin: 0 auto;
+  border-top: 1px solid #FF8C00;
+  border-bottom: 1px solid #FF8C00;
+  background-color: #aaaaaa;
+  font-size: 20px;
+  color: #FF8C00;
+  text-align: center;
+}
 .createPage__comp {
+  padding: 50px 100px 0 100px;
   &__box {
-    margin: 50px;
     text-align: center;
-    font-size: 30px;
     a {
       padding: 20px;
-      border-radius: 5px;
+      border-radius: 20px;
       background-color: #777777;
       display: block;
       color: white;
@@ -14,18 +22,24 @@
     a:hover {
       border-radius: 20px;
       font-weight: bold;
-      transition: 0.5s;
+      opacity: 0.5;
+    }
+    &__en {
+      font-size: 25px;
+    }
+    &__ja {
+      font-size: 15px;
     }
   }
 }
 .createPage__next {
+  padding: 50px 100px;
   &__box {
-    margin: 50px;
     text-align: center;
     font-size: 30px;
     a {
       padding: 20px;
-      border-radius: 5px;
+      border-radius: 20px;
       background-color: #FF8C00;
       display: block;
       color: white;
@@ -34,7 +48,13 @@
     a:hover {
       border-radius: 20px;
       font-weight: bold;
-      transition: 0.5s;
+      opacity: 0.5;
+    }
+    &__en {
+      font-size: 25px;
+    }
+    &__ja {
+      font-size: 15px;
     }
   }
 }

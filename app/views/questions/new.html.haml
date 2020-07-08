@@ -2,23 +2,28 @@
 
 - if user_signed_in?
   .createPage
+    .createPage__title
+      .createPage__title__en
+        Create
+      .createPage__title__ja
+        〜問題を作る〜
     .createPage__question
       = form_for @question do |f|
         .createPage__question__formBox
           .createPage__question__formBox__title
-            = f.label :title, "Title"
+            = f.label :title, "Title / 問題のタイトル"
           .createPage__question__formBox__form
             = f.text_field :title, placeholder: "Title"
         .createPage__question__formBox
           .createPage__question__formBox__sentence
-            = f.label :sentence, "Sentence"
+            = f.label :sentence, "Sentence / 問題文"
           .createPage__question__formBox__form
             = f.text_area :sentence, placeholder: "Sentence"
         .createPage__question__formBox
           .createPage__question__formBox__format
-            = f.label :question_format, "Format"
+            = f.label :question_format, "Format / 問題形式"
           .createPage__question__formBox__form
-            = f.select :question_format, [['Four'], ['Sort'], ['Description']], { include_blank: true }
+            = f.select :question_format, [['Four:4択問題'], ['Sort:並び替え問題'], ['Description:記述問題']], { include_blank: true }
         .createPage__question__formBox
           = f.submit "Next", class: "createPage__question__formBox__btn"
 

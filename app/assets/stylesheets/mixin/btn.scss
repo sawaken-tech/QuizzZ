@@ -52,3 +52,14 @@
   font-weight: bold;
   text-align: center;
 }
+
+@mixin new_question_btn {
+  padding: 5px 30px;
+  color: #FF8C00;
+}
+@mixin new_question_btn_hover {
+  background-color: #FF8C00;
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+}

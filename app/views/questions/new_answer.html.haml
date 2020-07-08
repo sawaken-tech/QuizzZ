@@ -1,6 +1,11 @@
 = render 'homes/header'
 
 .createPage
+  .createPage__title
+    .createPage__title__en
+      Create
+    .createPage__title__ja
+      〜問題を作る〜
   .createPage__answer
     = form_for @answer, url:answer_questions_path(@answer) do |f|
 
@@ -8,7 +13,7 @@
         .createPage__answer__formBox__up
           .createPage__answer__formBox__up__box
             .createPage__answer__formBox__up__box__answerTitle
-              = f.label :answer, "Answer"
+              = f.label :answer, "Answer / 答え"
             .createPage__answer__formBox__up__box__formImg
               .createPage__answer__formBox__up__box__formImg__answerForm
                 = f.text_field :answer
@@ -19,7 +24,7 @@
 
           .createPage__answer__formBox__up__box
             .createPage__answer__formBox__up__box__select
-              = f.label :four_select1, "Select"
+              = f.label :four_select1, "Select / 選択肢1"
             .createPage__answer__formBox__up__box__formImg
               .createPage__answer__formBox__up__box__formImg__form
                 = f.text_field :four_select1
@@ -31,7 +36,7 @@
         .createPage__answer__formBox__down
           .createPage__answer__formBox__down__box
             .createPage__answer__formBox__down__box__select
-              = f.label :four_select2, "Select"
+              = f.label :four_select2, "Select / 選択肢2"
             .createPage__answer__formBox__down__box__formImg
               .createPage__answer__formBox__down__box__formImg__form
                 = f.text_field :four_select2
@@ -42,7 +47,7 @@
 
           .createPage__answer__formBox__down__box
             .createPage__answer__formBox__down__box__select
-              = f.label :four_select3, "Select"
+              = f.label :four_select3, "Select / 選択肢3"
             .createPage__answer__formBox__down__box__formImg
               .createPage__answer__formBox__down__box__formImg__form
                 = f.text_field :four_select3
@@ -53,15 +58,15 @@
 
       .createPage__answer__formBox
         .createPage__answer__formBox__explain
-          = f.label :explain, "Explain"
+          = f.label :explain, "Explain / 答えの解説"
         .createPage__answer__formBox__explainForm
           = f.text_area :explain
       .createPage__answer__formBox
         .createPage__answer__formBox__genre
-          = f.label :genre, "Genre"
+          = f.label :genre, "Genre / ジャンル"
         .createPage__answer__formBox__genreForm
           = f.select :genre, [['test0'], ['test1'], ['test2']], { include_blank: true }
-      .createPage__question__formBox
-        = f.submit "Next", class: "createPage__question__formBox__btn"
+      .createPage__answer__formBox
+        = f.submit "Next", class: "createPage__answer__formBox__btn"
 
 = render 'homes/footer'
