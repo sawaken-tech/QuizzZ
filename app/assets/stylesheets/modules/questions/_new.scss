@@ -2,10 +2,8 @@
   @include color_background;
   padding-top: 30px;
   &__title {
-    margin: 0 auto;
+    @include index_title;
     background-color: #FF8C00;
-    color: white;
-    text-align: center;
     &__en {
       font-size: 20px;
     }

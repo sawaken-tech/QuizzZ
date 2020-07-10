@@ -2,7 +2,10 @@
 - if user_signed_in?
   .questionsIndexEdit
     .questionsIndexEdit__title
-      Questions
+      .questionsIndex__title__en
+        Edit
+      .questionsIndex__title__ja
+        〜編集〜
     .questionsIndexEdit__container
       - current_user.questions.each do |question| 
         .questionsIndexEdit__container__box

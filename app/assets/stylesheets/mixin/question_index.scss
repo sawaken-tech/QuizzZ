@@ -1,20 +1,33 @@
 @mixin index_title {
-  font-size: 30px;
-  font-weight: bold;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
 }
 
 @mixin index_container {
   display: flex;
   flex-wrap: wrap;
+  padding: 20px 50px;
 }
 
 @mixin index_box {
-  margin: 10px 20px 10px 0;
-  width: 30%;
+  margin: 20px;
+  width: 28%;
+}
+
+@mixin title_no {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px white;
+  background-color: #aaaaaa;
+  color: white;
+  text-align: center;
+  line-height: 50px;
 }
 
 @mixin index_questionBox {
-  padding: 5px;
+  padding: 20px;
   border-radius: 5px;
 }
 

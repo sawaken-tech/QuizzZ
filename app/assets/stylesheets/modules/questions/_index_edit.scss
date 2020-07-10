@@ -1,27 +1,35 @@
 .questionsIndexEdit {
   @include color_background;
-  padding: 40px;
+  padding-top: 30px;
   &__title{
     @include index_title;
-    color: #9932CC;
-    text-shadow: 1px 2px 0 white;
+    background-color: #9932CC;
+    &__en {
+      font-size: 20px;
+    }
+    &__ja {
+      font-size: 15px;
+    }
   }
   &__container {
     @include index_container;
     &__box {
       @include index_box;
+      position: relative;
       a {
         text-decoration: none;
       }
       &__title {
-        padding-left: 5px;
-        color: white;
+        position: absolute;
+        top: -25px;
+        left: -25px;
+        @include title_no;
       }
       &__questionBox {
         @include index_questionBox;
-        background-color: white;
-        box-shadow: 2px 2px 2px #9932CC;
-        color: #9370DB;
+        background-color: #aaaaaa;
+        box-shadow: 2px 2px 0 white;
+        color: white;
         &__name {
         }
         &__sentence {

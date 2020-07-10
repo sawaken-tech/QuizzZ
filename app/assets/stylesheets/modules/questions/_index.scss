@@ -1,27 +1,35 @@
 .questionsIndex {
   @include color_background;
-  padding: 40px;
+  padding-top: 30px;
   &__title{
     @include index_title;
-    color: #00BFFF;
-    text-shadow: 1px 2px 0 white;
+    background-color: #00BFFF;
+    &__en {
+      font-size: 20px;
+    }
+    &__ja {
+      font-size: 15px;
+    }
   }
   &__container {
     @include index_container;
     &__box {
       @include index_box;
+      position: relative;
       a {
         text-decoration: none;
       }
       &__title {
-        padding-left: 5px;
-        color: white;
+        position: absolute;
+        top: -25px;
+        left: -25px;
+        @include title_no;
       }
       &__questionBox {
         @include index_questionBox;
-        background-color: white;
-        box-shadow: 2px 2px 2px #1E90FF;
-        color: #00BFFF;
+        background-color: #aaaaaa;
+        box-shadow: 2px 2px 0 white;
+        color: white;
         &__name {
         }
         &__sentence {
@@ -29,11 +37,21 @@
           overflow: hidden;
           text-overflow: ellipsis;
         }
+        &__icon {
+          display: flex;
+          justify-content: flex-end;
+          &__good {
+            margin: 5px;
+          }
+          &__comment {
+            margin: 5px;
+          }
+        }
       }
       &__questionBox:hover {
         font-weight: bold;
         background-color: #00BFFF;
-        box-shadow: 3px 5px 2px #1E90FF;
+        box-shadow: 3px 5px 0 #1E90FF;
         border-radius: 5px;
         color: white;
         transition: 0.3s;
