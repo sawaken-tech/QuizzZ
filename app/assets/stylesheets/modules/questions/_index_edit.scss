@@ -30,12 +30,13 @@
         background-color: #aaaaaa;
         box-shadow: 2px 2px 0 white;
         color: white;
-        &__name {
-        }
         &__sentence {
-          white-space: nowrap;
+          height: 50px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          word-wrap: break-word;
           overflow: hidden;
-          text-overflow: ellipsis;
         }
       }
       &__questionBox:hover {
