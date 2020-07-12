@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
   }
 
-  resources :questions, only: [:index, :new, :create, :edit, :update] do
+  resources :questions, only: [:index, :new, :create, :edit, :update, :destroy] do
     collection do
       get 'answer', to: 'questions#new_answer'
       post 'answer', to: 'questions#create_answer'

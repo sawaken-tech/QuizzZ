@@ -19,7 +19,7 @@
             .questionsIndexEdit__container__box__btn__edit
               = link_to "edit", edit_question_path(question)
             .questionsIndexEdit__container__box__btn__delete
-              = link_to "delete"
+              = link_to "delete", question, method: :delete, data: { confirm: "削除しますか？" }
 
 - else
   = render 'login_view'

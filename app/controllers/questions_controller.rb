@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-  before_action :set_question, only: [:slove, :result, :edit, :update]
+  before_action :set_question, only: [:slove, :result, :edit, :update, :destroy]
 
   # 問題一覧表示
   def index
@@ -60,6 +60,15 @@ class QuestionsController < ApplicationController
       redirect_to index_edit_questions_path
     else
       render :edit
+    end
+  end
+
+  # 問題削除
+  def destroy
+    if @question.destroy
+      redirect_to index_edit_questions_path
+    else
+      redirect_to index_edit_questions_path
     end
   end
   
