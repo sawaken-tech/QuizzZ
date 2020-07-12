@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-  before_action :set_question, only: [:slove, :result, :edit]
+  before_action :set_question, only: [:slove, :result, :edit, :update]
 
   # 問題一覧表示
   def index
@@ -53,6 +53,15 @@ class QuestionsController < ApplicationController
   def edit
   end
 
+  # 問題更新
+  def update
+    @edit_question = Question.find(params[:id])
+    if @question.update(update_question_params)
+      redirect_to index_edit_questions_path
+    else
+      render :edit
+    end
+  end
   
   private
 
@@ -87,8 +96,36 @@ class QuestionsController < ApplicationController
       )
   end
 
+  def update_question_params
+    params.require(:question).permit(
+      :title,
+      :sentence,
+      :question_format,
+      answer_attributes: [
+        :answer,
+        :answer_image,
+        :explain,
+        :genre,
+        :question_id,
+        :four_select1,
+        :four_image1,
+        :four_select2,
+        :four_image2,
+        :four_select3,
+        :four_image3,
+        :sort_select1,
+        :sort_image1,
+        :sort_select2,
+        :sort_image2,
+        :sort_select3,
+        :sort_image3,
+        :description_image
+      ]).merge(user_id: current_user.id)
+  end
+
   def set_question
     @question = Question.find(params[:id])
+    @answer = Answer.find(params[:id])
   end
 
 
