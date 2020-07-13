@@ -1,94 +1,92 @@
 = render 'homes/header'
 
-問題編集フォーム
-No#{@question.id}
-
 .questionsIndexEdit
   .questionsIndexEdit__title
     .questionsIndex__title__en
-      Edit
+      Edit - No#{@question.id}
     .questionsIndex__title__ja
       〜編集〜
-  .editPage__question
-    = form_for @question do |f|
-      .editPage__question__formBox
-        .editPage__question__formBox__title
-          = f.label :title, "Title / 問題のタイトル"
-        .editPage__question__formBox__form
-          = f.text_field :title, placeholder: "Title"
-
-      .editPage__question__formBox
-        .editPage__question__formBox__sentence
-          = f.label :sentence, "Sentence / 問題文"
-        .editPage__question__formBox__form
-          = f.text_area :sentence, placeholder: "Sentence"
-          
-      .editPage__question__formBox
-        .editPage__question__formBox__format
-          = f.label :question_format, "Format / 問題形式"
-        .editPage__question__formBox__form
-          = f.select :question_format, [['Four:4択問題'], ['Sort:並び替え問題'], ['Description:記述問題']]
-
-      = f.fields_for @answer do |a|
+  .editPage
+    .editPage__question
+      = form_for @question do |f|
         .editPage__question__formBox
-          .editPage__question__formBox__up
-            .editPage__question__formBox__up__box
-              .editPage__question__formBox__up__box__answerTitle
-                = a.label :answer, "Answer / 答え"
-              .editPage__question__formBox__up__box__formImg
-                .editPage__question__formBox__up__box__formImg__answerForm
-                  = a.text_field :answer
-                .editPage__question__formBox__up__box__formImg__answerImage
-                  = a.label :answer_image, "Image" do
-                    = icon('fas', 'image')
-                    = a.file_field :answer_image, class: "hidden"
+          .editPage__question__formBox__title
+            = f.label :title, "Title / 問題のタイトル"
+          .editPage__question__formBox__titleForm
+            = f.text_field :title, placeholder: "Title"
 
-              .editPage__question__formBox__up__box
-                .editPage__question__formBox__up__box__select
-                  = a.label :four_select1, "Select / 選択肢1"
-                .editPage__question__formBox__up__box__formImg
-                  .editPage__question__formBox__up__box__formImg__form
-                    = a.text_field :four_select1
-                  .editPage__question__formBox__up__box__formImg__image
-                    = a.label :four_image1, "Image" do
-                      = icon('fas', 'image')
-                      = a.file_field :four_image1, class: "hidden"
+        .editPage__question__formBox
+          .editPage__question__formBox__sentence
+            = f.label :sentence, "Sentence / 問題文"
+          .editPage__question__formBox__sentenceForm
+            = f.text_area :sentence, placeholder: "Sentence"
             
-            .editPage__question__formBox__down
-              .editPage__question__formBox__down__box
-                .editPage__question__formBox__down__box__select
-                  = a.label :four_select2, "Select / 選択肢2"
-                .editPage__question__formBox__down__box__formImg
-                  .editPage__question__formBox__down__box__formImg__form
-                    = a.text_field :four_select2
-                  .editPage__question__formBox__down__box__formImg__image
-                    = a.label :four_image2, "Image" do
+        .editPage__question__formBox
+          .editPage__question__formBox__format
+            = f.label :question_format, "Format / 問題形式"
+          .editPage__question__formBox__formatForm
+            = f.select :question_format, [['Four:4択問題'], ['Sort:並び替え問題'], ['Description:記述問題']]
+
+        = f.fields_for @answer do |a|
+          .editPage__question__formBox
+            .editPage__question__formBox__up
+              .editPage__question__formBox__up__box
+                .editPage__question__formBox__up__box__answerTitle
+                  = a.label :answer, "Answer / 答え"
+                .editPage__question__formBox__up__box__formImg
+                  .editPage__question__formBox__up__box__formImg__answerForm
+                    = a.text_field :answer
+                  .editPage__question__formBox__up__box__formImg__answerImage
+                    = a.label :answer_image, "Image" do
                       = icon('fas', 'image')
-                      = a.file_field :four_image2, class: "hidden"
+                      = a.file_field :answer_image, class: "hidden"
 
-              .editPage__question__formBox__down__box
-                .editPage__question__formBox__down__box__select
-                  = a.label :four_select3, "Select / 選択肢3"
-                .editPage__question__formBox__down__box__formImg
-                  .editPage__question__formBox__down__box__formImg__form
-                    = a.text_field :four_select3
-                  .editPage__question__formBox__down__box__formImg__image
-                    = a.label :four_image3, "Image" do
-                      = icon('fas', 'image')
-                      = a.file_field :four_image3, class: "hidden"
+                .editPage__question__formBox__up__box
+                  .editPage__question__formBox__up__box__select
+                    = a.label :four_select1, "Select / 選択肢1"
+                  .editPage__question__formBox__up__box__formImg
+                    .editPage__question__formBox__up__box__formImg__form
+                      = a.text_field :four_select1
+                    .editPage__question__formBox__up__box__formImg__image
+                      = a.label :four_image1, "Image" do
+                        = icon('fas', 'image')
+                        = a.file_field :four_image1, class: "hidden"
+              
+              .editPage__question__formBox__down
+                .editPage__question__formBox__down__box
+                  .editPage__question__formBox__down__box__select
+                    = a.label :four_select2, "Select / 選択肢2"
+                  .editPage__question__formBox__down__box__formImg
+                    .editPage__question__formBox__down__box__formImg__form
+                      = a.text_field :four_select2
+                    .editPage__question__formBox__down__box__formImg__image
+                      = a.label :four_image2, "Image" do
+                        = icon('fas', 'image')
+                        = a.file_field :four_image2, class: "hidden"
 
-        .editPage__question__formBox
-          .editPage__question__formBox__explain
-            = a.label :explain, "Explain / 答えの解説"
-          .editPage__question__formBox__explainForm
-            = a.text_area :explain
-        .editPage__question__formBox
-          .editPage__question__formBox__genre
-            = a.label :genre, "Genre / ジャンル"
-          .editPage__question__formBox__genreForm
-            = a.select :genre, [['test0'], ['test1'], ['test2']]
+                .editPage__question__formBox__down__box
+                  .editPage__question__formBox__down__box__select
+                    = a.label :four_select3, "Select / 選択肢3"
+                  .editPage__question__formBox__down__box__formImg
+                    .editPage__question__formBox__down__box__formImg__form
+                      = a.text_field :four_select3
+                    .editPage__question__formBox__down__box__formImg__image
+                      = a.label :four_image3, "Image" do
+                        = icon('fas', 'image')
+                        = a.file_field :four_image3, class: "hidden"
 
-        .editPage__question__formBox
-          = f.submit "Next", class: ".editPage__question__formBox__btn"
+          .editPage__question__formBox
+            .editPage__question__formBox__explain
+              = a.label :explain, "Explain / 答えの解説"
+            .editPage__question__formBox__explainForm
+              = a.text_area :explain
+          .editPage__question__formBox
+            .editPage__question__formBox__genre
+              = a.label :genre, "Genre / ジャンル"
+            .editPage__question__formBox__genreForm
+              = a.select :genre, [['test0'], ['test1'], ['test2']]
+
+          .editPage__question__formBox
+            = f.submit "Next", class: ".editPage__question__formBox__btn"
 
 = render 'homes/footer'
