@@ -14,14 +14,16 @@
           .questionsIndexEdit__container__box__questionBox
             .questionsIndexEdit__container__box__questionBox__sentence
               = question.sentence
+            .questionsIndexEdit__container__box__questionBox__btn
+              .questionsIndexEdit__container__box__questionBox__btn__edit
+                = link_to edit_question_path(question) do
+                  = icon('fas', 'cog')
+              .questionsIndexEdit__container__box__questionBox__btn__delete
+                = link_to question, method: :delete, data: { confirm: "削除しますか？" } do
+                  = icon('fas', 'trash-alt')
 
-          .questionsIndexEdit__container__box__btn
-            .questionsIndexEdit__container__box__btn__edit
-              = link_to "edit", edit_question_path(question)
-            .questionsIndexEdit__container__box__btn__delete
-              = link_to "delete", question, method: :delete, data: { confirm: "削除しますか？" }
 
 - else
   = render 'login_view'
-  
+
 = render 'homes/footer'

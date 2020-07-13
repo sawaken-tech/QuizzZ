@@ -27,10 +27,13 @@
       }
       &__questionBox {
         @include index_questionBox;
+        display: flex;
+        justify-content: space-between;
         background-color: #aaaaaa;
         box-shadow: 2px 2px 0 white;
         color: white;
         &__sentence {
+          padding-right: 5px;
           height: 50px;
           display: -webkit-box;
           -webkit-box-orient: vertical;
@@ -38,9 +41,24 @@
           word-wrap: break-word;
           overflow: hidden;
         }
+        &__btn {
+          display: flex;
+          &__edit {
+            font-size: 1.5rem;
+            a {
+              color: white;
+            }
+          }
+          &__delete {
+            padding-left: 10px;
+            font-size: 1.5rem;
+            a {
+              color: white;
+            }
+          }
+        }
       }
       &__questionBox:hover {
-        font-weight: bold;
         background-color: #9370DB;
         box-shadow: 3px 5px 2px #9932CC;
         border-radius: 5px;
