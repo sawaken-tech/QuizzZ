@@ -85,6 +85,7 @@
               = a.select :genre, [['test0'], ['test1'], ['test2']]
 
           .editPage__question__formBox
-            = f.submit "Next", class: ".editPage__question__formBox__btn"
+            .editPage__question__formBox__btn
+              = f.submit "Edit"
 
 = render 'homes/footer'

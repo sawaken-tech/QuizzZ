@@ -9,7 +9,7 @@
         font-size: 30px;
         text-align: center;
         select {
-          padding: 5px;
+          padding: 10px 20px;
           border-radius: 10px;
           @include color_edit_form;
         }
@@ -22,8 +22,9 @@
         &__titleForm {
           padding: 10px;
           input {
-            @include color_edit_form;
+            padding: 10px 20px;
             border-radius: 10px;
+            @include color_edit_form;
           }
         }
       }
@@ -39,51 +40,55 @@
       }
       &__up {
         display: flex;
-        justify-content: center;
         &__box {
-          margin: 0 10px 20px 10px;
+          margin: 0 10px 0 5px;
           width: 45%;
           &__answerTitle {
+            color: red;
           }
           &__formImg {
-            @include create_form;
             &__answerForm {
               @include form_size;
               input {
-                border-radius: 10px;
+                @include edit_select_form;
               }
             }
             &__answerImage {
               @include img_icon;
+              text-align: right;
             }
-          }
-          &__select {
-          }
-          &__formImg {
-            @include create_form;
+            &__select {
+            }
             &__form {
               @include form_size;
+              input {
+                @include edit_select_form;
+              }
             }
             &__image {
               @include img_icon;
+              text-align: right;
             }
-          }
+          } 
         }
       }
       &__down {
         display: flex;
-        justify-content: center;
         &__box {
-          margin: 0 10px 20px 10px;
+          margin: 0 10px 20px 5px;
+          width: 45%;
           &__select {
           }
           &__formImg {
-            @include create_form;
             &__form {
               @include form_size;
+              input {
+                @include edit_select_form;
+              }
             }
             &__image {
               @include img_icon;
+              text-align: right;
             }
           }
         }
@@ -91,17 +96,42 @@
       &__explain {
 
       }
-      &__explainFrom {
-
+      &__explainForm {
+        textarea {
+          padding: 20px;
+          width: calc(90% + 20px);
+          border-radius: 10px;
+          @include color_edit_form;
+        }
       }
       &__genre {
 
       }
       &__genreForm {
-
+        select {
+          padding: 10px 20px;
+          border-radius: 10px;
+          @include color_edit_form;
+        }
       }
       &__btn {
-
+        margin: 0 auto;
+        padding: 40px 0;
+        width: 40%;
+        input {
+        padding: 20px;
+        border: none;
+        border-radius: 10px;
+        width: calc(90% + 20px);
+        text-align: center;
+        color: #9932CC;
+        }
+        input:hover {
+          background-color: #9932CC;
+          color: white;
+          font-weight: bold;
+          transition: 0.5s;
+        }
       }
     }
   }
