@@ -1,55 +1,89 @@
 .editPage {
   &__question {
+    padding: 0 50px;
     &__formBox {
-
-      &__title {
-
-      }
-      &__titleForm {
-
-      }
-      &__sentence {
-
-      }&__sentenceForm {
-
-      }
-      &__format {
-
-      }
+      padding: 10px;
+      font-size: 20px;
       &__formatForm {
-        
+        padding: 20px 20px 60px 20px;
+        font-size: 30px;
+        text-align: center;
+        select {
+          padding: 5px;
+          border-radius: 10px;
+          @include color_edit_form;
+        }
+      }
+      &__titleBox {
+        display: flex;
+        &__no {
+          padding: 10px;
+        }
+        &__titleForm {
+          padding: 10px;
+          input {
+            @include color_edit_form;
+            border-radius: 10px;
+          }
+        }
+      }
+      &__sentenceForm {
+        margin-bottom: 30px;
+        padding: 10px;
+        textarea {
+          padding: 20px;
+          width: calc(90% + 20px);
+          border-radius: 10px;
+          @include color_edit_form;
+        }
       }
       &__up {
+        display: flex;
+        justify-content: center;
         &__box {
+          margin: 0 10px 20px 10px;
+          width: 45%;
           &__answerTitle {
-
           }
           &__formImg {
+            @include create_form;
             &__answerForm {
-
+              @include form_size;
+              input {
+                border-radius: 10px;
+              }
             }
             &__answerImage {
-
+              @include img_icon;
             }
           }
           &__select {
-            &__formImg {
-              &__form {
-              }
-              &__image {
-              }
+          }
+          &__formImg {
+            @include create_form;
+            &__form {
+              @include form_size;
+            }
+            &__image {
+              @include img_icon;
             }
           }
         }
       }
       &__down {
+        display: flex;
+        justify-content: center;
         &__box {
+          margin: 0 10px 20px 10px;
           &__select {
-            &__formImg {
-              &__form {
-              }
-              &__image {
-              }
+          }
+          &__formImg {
+            @include create_form;
+            &__form {
+              @include form_size;
+            }
+            &__image {
+              @include img_icon;
             }
           }
         }
