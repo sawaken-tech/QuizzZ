@@ -19,8 +19,8 @@
                 .questionsIndex__container__box__questionBox__icon__good
                   = icon('far', 'thumbs-up')
                 .questionsIndex__container__box__questionBox__icon__comment
-                  = icon('far', 'comments')
-
+                  = link_to question_path(question) do
+                    = icon('far', 'comments')
 - else
   = render 'login_view'
 

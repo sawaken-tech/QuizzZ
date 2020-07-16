@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
   }
 
-  resources :questions, only: [:index, :new, :create, :edit, :update, :destroy] do
+  resources :questions do
     collection do
       get 'answer', to: 'questions#new_answer'
       post 'answer', to: 'questions#create_answer'
@@ -15,10 +15,7 @@ Rails.application.routes.draw do
       get 'slove', to: 'questions#slove'
       get 'result', to: 'questions#result'
     end
-  end
-
-  resources :questions do
-    resources :comments, only: :create
+    resources :comments, only: [:create]
   end
 
   root to: "homes#index"
