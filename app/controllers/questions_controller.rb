@@ -47,6 +47,8 @@ class QuestionsController < ApplicationController
 
   # コメント一覧
   def show
+    @comment = Comment.new
+    @comments = @question.comments
   end
 
   # 作成問題一覧

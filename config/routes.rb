@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       get 'slove', to: 'questions#slove'
       get 'result', to: 'questions#result'
     end
-    resources :comments, only: [:create]
+    resources :comments, only: [:create, :show]
   end
 
   root to: "homes#index"

@@ -1,1 +1,8 @@
+コメントフォーム
+= form_for [@question, @comment] do |f|
+  = f.text_area :comment
+  = f.submit "comment"
+
 コメント一覧
+- @comments.each do |comment|
+  = comment.comment
