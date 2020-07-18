@@ -1,8 +1,27 @@
-コメントフォーム
-= form_for [@question, @comment] do |f|
-  = f.text_area :comment
-  = f.submit "comment"
+= render 'homes/header'
 
-コメント一覧
-- @comments.each do |comment|
-  = comment.comment
+.commentPage
+  .commentPage__title
+    comment
+  .commentPage__form
+    = form_for [@question, @comment] do |f|
+      .commentPage__form__textarea
+        = f.text_area :comment
+      .commentPage__form__sendBtn
+        = f.submit "send"
+
+  .commentPage__messages
+    .commentPage__messages__title
+      .commentPage__messages__title__en
+        comments /
+      .commentPage__messages__title__ja
+        コメント一覧
+    - @comments.each do |comment|
+      .commentPage__messages__box
+        .commentPage__messages__box__name
+          = comment.user.nickname
+        .commentPage__messages__box__comment
+          = comment.comment
+
+
+= render 'homes/footer'
