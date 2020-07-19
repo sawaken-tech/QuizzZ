@@ -65,14 +65,16 @@
         &__name {
           a {
             color: #00BFFF;
+            text-decoration: none;
           }
         }
         &__comment {
         }
         &__date {
+          margin-left: auto;
+          color: #aaaaaa;
           font-size: 12px;
           line-height: 24px;
-          margin-left: auto;
         }
       }
     }

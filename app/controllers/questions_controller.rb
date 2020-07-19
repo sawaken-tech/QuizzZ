@@ -48,7 +48,7 @@ class QuestionsController < ApplicationController
   # コメント一覧
   def show
     @comment = Comment.new
-    @comments = @question.comments
+    @comments = @question.comments.order('created_at DESC')
   end
 
   # 作成問題一覧
