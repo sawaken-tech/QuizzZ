@@ -41,11 +41,22 @@
         &__icon {
           display: flex;
           justify-content: flex-end;
+          font-size: 2.0rem;
           &__good {
             margin: 5px;
+            &__count {
+              text-align: center;
+              color: #1E90FF;
+              font-size: 12px; 
+            }
           }
           &__comment {
             margin: 5px;
+            &__count {
+              text-align: center;
+              color: #1E90FF;
+              font-size: 12px; 
+            }
           }
         }
       }
@@ -54,8 +65,11 @@
         background-color: #00BFFF;
         box-shadow: 3px 5px 0 #1E90FF;
         border-radius: 5px;
-        color: white;
         transition: 0.3s;
+        a:hover {
+          transition: 0.3s;
+          color: white;
+        }
       }
     }
   }

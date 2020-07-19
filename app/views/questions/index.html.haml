@@ -18,9 +18,13 @@
               .questionsIndex__container__box__questionBox__icon
                 .questionsIndex__container__box__questionBox__icon__good
                   = icon('far', 'thumbs-up')
+                  .questionsIndex__container__box__questionBox__icon__good__count
+                    #{question.rates.count}
                 .questionsIndex__container__box__questionBox__icon__comment
                   = link_to question_path(question) do
-                    = icon('far', 'comments')
+                    = icon('far', 'comment')
+                    .questionsIndex__container__box__questionBox__icon__comment__count
+                      #{question.comments.count}
 - else
   = render 'login_view'
 
