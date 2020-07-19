@@ -35,9 +35,11 @@ ActiveRecord::Schema.define(version: 20200615083528) do
   end
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "user_id"
-    t.integer "question_id"
-    t.text    "comment",     limit: 65535
+    t.integer  "user_id"
+    t.integer  "question_id"
+    t.text     "comment",     limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -53,9 +55,11 @@ ActiveRecord::Schema.define(version: 20200615083528) do
   end
 
   create_table "rates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "user_id"
-    t.integer "question_id"
-    t.string  "rate"
+    t.integer  "user_id"
+    t.integer  "question_id"
+    t.string   "rate"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
