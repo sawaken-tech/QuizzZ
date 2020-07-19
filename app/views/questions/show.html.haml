@@ -16,12 +16,14 @@
         comments /
       .commentPage__messages__title__ja
         コメント一覧
-    - @comments.each do |comment|
-      .commentPage__messages__box
-        .commentPage__messages__box__name
-          = comment.user.nickname
-        .commentPage__messages__box__comment
-          = comment.comment
+    .commentPage__messages__container
+      - @comments.each do |comment|
+        .commentPage__messages__container__box
+          .commentPage__messages__container__box__name
+            = link_to comment.user.nickname, "#"
+            ：
+          .commentPage__messages__container__box__comment
+            = comment.comment
 
 
 = render 'homes/footer'
