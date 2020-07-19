@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 
   def create
     Comment.create(comment_params)
-    redirect_to questions_path
+    redirect_to :back
   end
 
 
