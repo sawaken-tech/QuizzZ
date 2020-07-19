@@ -24,6 +24,8 @@
             ：
           .commentPage__messages__container__box__comment
             = comment.comment
+          .commentPage__messages__container__box__date
+            = comment.created_at.strftime("%Y-%m-%d %H:%M")
 
 
 = render 'homes/footer'
