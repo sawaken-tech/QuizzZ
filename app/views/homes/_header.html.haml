@@ -5,7 +5,7 @@
   .header__rightBox
     - if user_signed_in?
       .header__rightBox__mypage
-        = link_to "#" do
+        = link_to "/mypages/#{current_user.id}" do
           .header__rightBox__mypage__icon
             = icon('fas', 'laptop')
           .header__rightBox__mypage__name

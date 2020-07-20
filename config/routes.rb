@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :show]
   end
 
+  resources :mypages, only: [:show] do
+  end
+
   root to: "homes#index"
 
 end
