@@ -1,4 +1,14 @@
 = render 'homes/header'
-mypage
+
+.mypage
+  .mypage__topBox
+    .mypage__topBox__title
+      #{@user.nickname}さんのマイページ
+  .mypage__midleBox
+    .mypage__midleBox__container
+      .mypage__midleBox__container__question
+        問題数：#{current_user.questions.count}
+      .mypage__midleBox__container__rate
+        いいね：
 
 = render 'homes/footer'
