@@ -1,16 +1,20 @@
 .mypage {
+  @include color_background;
   &__topBox {
     &__title {
-
+      padding: 10px;
+      text-align: center;
     }
   }
   &__midleBox {
     &__container {
+      display: flex;
+      justify-content: center;
       &__question {
-
+        padding: 10px;
       }
       &__rate {
-        
+        padding: 10px;
       }
     }
   }
