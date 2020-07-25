@@ -65,7 +65,7 @@
         .createPage__answer__formBox__genre
           = f.label :genre, "Genre / ジャンル"
         .createPage__answer__formBox__genreForm
-          = f.select :genre, [['test0'], ['test1'], ['test2']], { include_blank: true }
+          = f.select :genre, [['Programing'], ['English'], ['Sports'], ['Etc']], { include_blank: true }
       .createPage__answer__formBox
         = f.submit "Next", class: "createPage__answer__formBox__btn"
 
