@@ -3,16 +3,26 @@
 .mypage
   .mypage__topBox
     .mypage__topBox__title
-      #{@user.nickname}さんのマイページ
+      #{@user.nickname} 's Mypage
   .mypage__midleBox
     .mypage__midleBox__container
       .mypage__midleBox__container__question
-        問題数：#{current_user.questions.count}
+        Questions：#{current_user.questions.count}
       .mypage__midleBox__container__rate
-        いいね：
+        Rates：
   .mypage__underBox
     .mypage__underBox__container
       .mypage__underBox__container__profile
-        プロフィール
+        = link_to "#" do
+          .mypage__underBox__container__profile__title
+            profile
+          .mypage__underBox__container__profile__img
+            = icon('fas', 'address-card')
+      .mypage__underBox__container__questions
+        = link_to index_edit_questions_path do
+          .mypage__underBox__container__questions__title
+            questions
+          .mypage__underBox__container__questions__img
+            = icon('fas', 'graduation-cap')
 
 = render 'homes/footer'

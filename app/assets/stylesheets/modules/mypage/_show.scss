@@ -1,22 +1,54 @@
 .mypage {
   @include color_background;
+  padding: 30px;
   &__topBox {
     &__title {
-      padding: 10px;
       text-align: center;
+      font-size: 40px;
       font-weight: bold;
     }
   }
   &__midleBox {
+    padding: 30px;
+    font-size: 30px;
     &__container {
       display: flex;
       justify-content: center;
       &__question {
-        padding: 10px;
+        padding: 30px;
       }
       &__rate {
-        padding: 10px;
+        padding: 30px;
       }
     }
   }
+  &__underBox {
+    border-top: 2px solid #cccccc;
+    &__container {
+      display: flex;
+      justify-content: space-around;
+      font-size: 20px;
+      &__profile {
+        padding: 30px;
+        text-align: center;
+        &__title {
+
+        }
+        &__img {
+          font-size: 3.0em;
+        }
+      }
+      &__questions {
+        padding: 30px;
+        text-align: center;
+        &__title {
+
+        }
+        &__img {
+          font-size: 3.0em;
+        }
+      }
+    }
+  }
+
 }
