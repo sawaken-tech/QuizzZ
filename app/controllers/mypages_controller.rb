@@ -5,6 +5,12 @@ class MypagesController < ApplicationController
   def show
   end
 
+  def edit_profile
+  end
+
+  def update_profile
+  end
+
   private
 
   def set_user

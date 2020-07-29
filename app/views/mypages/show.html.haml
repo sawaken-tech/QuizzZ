@@ -19,7 +19,7 @@
           .mypage__underBox__container__questions__img
             = icon('fas', 'graduation-cap')
       .mypage__underBox__container__profile
-        = link_to "#" do
+        = link_to profile_mypage_path(current_user.id) do
           .mypage__underBox__container__profile__title
             profile
           .mypage__underBox__container__profile__img
