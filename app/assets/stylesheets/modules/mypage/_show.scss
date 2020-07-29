@@ -28,9 +28,9 @@
       display: flex;
       justify-content: space-around;
       font-size: 20px;
-      &__profile {
+      &__questions {
         a {
-          color: white;
+          color: black;
           text-decoration: none;
         }
         padding: 30px;
@@ -42,9 +42,23 @@
           font-size: 3.0em;
         }
       }
-      &__questions {
+      &__profile {
         a {
-          color: black;
+          color: #777777;
+          text-decoration: none;
+        }
+        padding: 30px;
+        text-align: center;
+        &__title {
+
+        }
+        &__img {
+          font-size: 3.0em;
+        }
+      }
+      &__password {
+        a {
+          color: white;
           text-decoration: none;
         }
         padding: 30px;

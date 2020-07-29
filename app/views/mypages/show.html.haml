@@ -12,17 +12,23 @@
         Rates：
   .mypage__underBox
     .mypage__underBox__container
-      .mypage__underBox__container__profile
-        = link_to "#" do
-          .mypage__underBox__container__profile__title
-            profile
-          .mypage__underBox__container__profile__img
-            = icon('fas', 'address-card')
       .mypage__underBox__container__questions
         = link_to index_edit_questions_path do
           .mypage__underBox__container__questions__title
             questions
           .mypage__underBox__container__questions__img
             = icon('fas', 'graduation-cap')
+      .mypage__underBox__container__profile
+        = link_to "#" do
+          .mypage__underBox__container__profile__title
+            profile
+          .mypage__underBox__container__profile__img
+            = icon('fas', 'address-card')
+      .mypage__underBox__container__password
+        = link_to edit_user_registration_path do
+          .mypage__underBox__container__password__title
+            password
+          .mypage__underBox__container__password__img
+            = icon('fas', 'unlock-alt')
 
 = render 'homes/footer'
