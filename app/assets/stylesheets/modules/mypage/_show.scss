@@ -29,6 +29,10 @@
       justify-content: space-around;
       font-size: 20px;
       &__profile {
+        a {
+          color: white;
+          text-decoration: none;
+        }
         padding: 30px;
         text-align: center;
         &__title {
@@ -39,6 +43,10 @@
         }
       }
       &__questions {
+        a {
+          color: black;
+          text-decoration: none;
+        }
         padding: 30px;
         text-align: center;
         &__title {
