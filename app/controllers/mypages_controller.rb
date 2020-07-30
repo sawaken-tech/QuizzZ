@@ -18,6 +18,10 @@ class MypagesController < ApplicationController
 
   private
 
+  def user_params
+    params.require(:user).permit(:nickname, :email)
+  end
+
   def set_user
     @user = User.find(params[:id])
   end
