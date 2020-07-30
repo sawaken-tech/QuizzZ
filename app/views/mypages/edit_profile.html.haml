@@ -1,1 +1,18 @@
-Profile
+.profilePage
+  .profilePage__title
+    profile
+  .profilePage__formBox
+    = form_for(@user, url: update_profile_mypage_path) do |f|
+      .profilePage__formBox__container
+        .profilePage__formBox__container__title
+          nickname
+        .profilePage__formBox__container__form
+          = f.text_field :nickname
+      .profilePage__formBox__container
+        .profilePage__formBox__container__title
+          email
+        .profilePage__formBox__container__form
+          = f.email_field :email
+      .profilePage__formBox__container
+        .profilePage__formBox__container__btn
+          = f.submit "update"

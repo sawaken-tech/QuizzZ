@@ -20,8 +20,8 @@ Rails.application.routes.draw do
 
   resources :mypages, only: [:show] do
     member do
-      get 'profile', to: 'mypages#edit_profile'
-      patch 'profile', to: 'mypages#update_profile'
+      get 'edit_profile'
+      patch 'update_profile'
     end
   end
 

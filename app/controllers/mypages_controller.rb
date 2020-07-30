@@ -9,6 +9,11 @@ class MypagesController < ApplicationController
   end
 
   def update_profile
+    if @user.update(user_params)
+      redirect_to "/mypages/#{current_user.id}"
+    else
+      render edit_profile_mypage_path
+    end
   end
 
   private
