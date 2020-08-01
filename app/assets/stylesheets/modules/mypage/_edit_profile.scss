@@ -10,13 +10,32 @@
     padding: 30px;
     text-align: center;
     &__container {
+      font-size: 20px;
       &__title {
-      }
+        color: #777777;
+      } 
       &__form {
-
+        padding: 10px 0;
+        line-height: 20px;
+        input {
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+        }
       }
       &__btn {
         padding-top: 30px;
+        input {
+          padding: 5px 30px;
+          border: none;
+          border-radius: 5px;
+        }
+        input:hover {
+          color: white;
+          background-color: #777777;
+          font-weight: bold;
+          transition: 0.5s;
+        }
       }
     }
   }
