@@ -3,22 +3,28 @@
   padding-top: 30px;
   &__title {
     @include index_title;
-    font-size: 25px;
+    padding: 10px;
     background-color: #777777;
+    &__en {
+      font-size: 25px
+    }
+    &__ja {
+      font-size: 12px;
+    }
   }
   &__formBox {
     padding: 30px;
     text-align: center;
     &__container {
-      font-size: 20px;
       &__title {
+        font-size: 20px;
         color: #777777;
       } 
       &__form {
         padding: 10px 0;
         line-height: 20px;
         input {
-          padding: 10px;
+          padding: 10px 20px;
           border: none;
           border-radius: 5px;
         }

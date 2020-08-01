@@ -2,7 +2,10 @@
 
 .profilePage
   .profilePage__title
-    profile
+    .profilePage__title__en
+      Edit Profile
+    .profilePage__title__ja
+      プロフィールの編集
   .profilePage__formBox
     = form_for(@user, url: update_profile_mypage_path) do |f|
       .profilePage__formBox__container
