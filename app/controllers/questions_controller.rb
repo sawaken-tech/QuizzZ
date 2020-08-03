@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
     @questions = Question.all
   end
 
-  # 問題解く
+  # 問題解
   def slove
   end
 

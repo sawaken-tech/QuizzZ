@@ -1,0 +1,7 @@
+- if question.rated_by?(current_user)
+  = link_to(question_add_path(question), method: :delete, remote: true) do
+    = icon('far', 'thumbs-up')
+
+- else
+  = link_to(question_add_path(question), method: :post, remote: true) do
+    = icon('far', 'thumbs-up')

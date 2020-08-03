@@ -17,13 +17,6 @@
                 = question.sentence
 
               .questionsIndex__container__box__questionBox__icon
-                - if current_user.rates
-                  = link_to "いいね解除", question_rate_path(question), method: :delete
-                - else
-                  = link_to "いいね", question_rates_path(question), method: :post
-
-
-
                 .questionsIndex__container__box__questionBox__icon__good
                   = icon('far', 'thumbs-up')
                   .questionsIndex__container__box__questionBox__icon__good__count

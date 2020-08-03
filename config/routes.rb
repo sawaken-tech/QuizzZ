@@ -16,7 +16,8 @@ Rails.application.routes.draw do
       get 'result', to: 'questions#result'
     end
     resources :comments, only: [:create, :show]
-    resources :rates, only: [:create, :destroy]
+    post 'add' => 'rates#create'
+    delete '/add' => 'rates#destroy'
   end
 
   resources :mypages, only: [:show] do

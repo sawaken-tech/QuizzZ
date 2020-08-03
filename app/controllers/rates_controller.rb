@@ -1,17 +1,28 @@
 class RatesController < ApplicationController
 
+  before_action :authenticate_user!
+  before_action :set_rate
+
   def create
-    @rate = current_user.rates.new(question_id: params[:question_id])
-    if @rate.save
-      redirect_to question_path
-    end
+    user = current_user
+    question = Question.find(params[:question_id])
+    rate = Rate.create(user_id: user.id, question_id: question.id)
   end
 
   def destroy
-    @rate = Rate.find_by(user_id: current_user.id, question: params[:question_id])
-    if @rate.destroy
-      redirect_to question_path
-    end
+    user = current_user
+    question = Question.find(params[:question_id])
+    rate = Rate.find_by(user_id: user.id, question_id: question.id)
+    rate.delete
   end
+
+
+  private
+
+  def set_like
+    @question = Question.find(params[:question_id])
+  end
+
+
 
 end

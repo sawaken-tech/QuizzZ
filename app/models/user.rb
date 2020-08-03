@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :questions
   has_many :comments
   has_many :rates
+  has_many :rate_question, through: :rates, source: :question
 end
