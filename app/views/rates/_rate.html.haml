@@ -1,5 +1,5 @@
 - if Rate.find_by(user_id: current_user.id, question_id: @question.id)
   いいね済み
 - else
-  = link_to question_rates_path(@question), method: :post do
+  = link_to("/rates/#{@question.id}/create", method: :post) do
     = icon('far', 'thumbs-up')
