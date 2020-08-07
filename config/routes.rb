@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   end
 
   post "rates/:qusetion_id/create" => "rates#create"
+  post "rates/:qusetion_id/destroy" => "rates#destroy"
 
   resources :mypages, only: [:show] do
     member do
