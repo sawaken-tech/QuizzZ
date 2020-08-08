@@ -1,5 +1,6 @@
 - if Rate.find_by(user_id: current_user.id, question_id: @question.id)
-  = link_to("/rates/#{@question.id}/destory", method: :post)
+  = link_to("/rates/#{@question.id}/destory", method: :post) do
+    いいね済み
 - else
   = link_to("/rates/#{@question.id}/create", method: :post) do
     = icon('far', 'thumbs-up')
