@@ -1,4 +1,7 @@
-- if Rate.find_by(user_id: current_user.id, question_id: @question.id)
+- if !current_user?(question.user)
+  
+
+Rate.find_by(user_id: current_user.id, question_id: @question.id)
   = link_to("/rates/#{@question.id}/destory", method: :post) do
     .rate-btn
       = icon('far', 'thumbs-up')

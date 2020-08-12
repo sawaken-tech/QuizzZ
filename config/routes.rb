@@ -18,8 +18,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :show]
   end
 
-  post "rates/:qusetion_id/create" => "rates#create"
-  post "rates/:qusetion_id/destroy" => "rates#destroy"
+  resources :retes, only: [:create, :destroy]
 
   resources :mypages, only: [:show] do
     member do
