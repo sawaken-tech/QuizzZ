@@ -1,11 +1,12 @@
 - if !current_user?(question.user)
-  
-
-Rate.find_by(user_id: current_user.id, question_id: @question.id)
-  = link_to("/rates/#{@question.id}/destory", method: :post) do
-    .rate-btn
-      = icon('far', 'thumbs-up')
-- else
-  = link_to("/rates/#{@question.id}/create", method: :post) do
-    .rate-btn-un
-      = icon('far', 'thumbs-up')
+  %span.like
+  - if question.iine?(current_user)
+    = fomr_for(question.rates.find_by(user_id: current_user.id), method: :delete, remote: true) do |f|
+      = button_tag(class: "btn btn-default btn-xs") do
+        = content_tag :span, "#", class: "glyphicon glyphicon-heart"
+  - else
+    = form_for(question.rates.build, remote: true) do |f|
+      %div
+        = hidden_field_tag :question_id, question.id
+        = button_tag(class: "btn btn-default btn-xs") do
+          = content_tag :span, "#", class: "glyphicon glyphicon-heart-empty"

@@ -14,5 +14,9 @@ class Question < ApplicationRecord
     rates.find_by(user_id: user.id).destory
   end
 
+  def iine?(user)
+    iine_users.include?(user)
+  end
+
 
 end
