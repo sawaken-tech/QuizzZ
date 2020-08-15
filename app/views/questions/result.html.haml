@@ -4,7 +4,7 @@
   .resultPage__main
     .resultPage__main__answerBox
       
-      = render 'rates/rate', question: question
+      = render 'rates/rate', locals: { question: @question }
 
       .resultPage__main__answerBox__title
         A:
