@@ -7,7 +7,9 @@ class RatesController < ApplicationController
   end
 
   def destroy
-
+    @rate = rate.find_by(user_id: @current_user.id, question_id: params[:question_id])
+    @rate.destroy
+    redirect_to("/questions/#{params[:question_id]}")
   end
 
 end
