@@ -5,7 +5,7 @@
     .resultPage__main__answerBox
 
     .resultPage__main__answerBox__rate
-      - if Rate.find_by(user_id: @current_user.id, question_id: @question.id)
+      - if Rate.find_by(user_id: current_user.id, question_id: @question.id)
         = link_to("いいね！済み", "/rates/#{@question.id}/destroy", {method: "post"})
       - else
         = link_to("いいね！", "/rates/#{@question.id}/create", {method: "post"})
