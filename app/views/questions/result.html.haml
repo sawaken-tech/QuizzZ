@@ -5,10 +5,10 @@
     .resultPage__main__answerBox
 
     .resultPage__main__answerBox__rate
-      - if Rate.find_by(user_id: current_user.id, question_id: @question.id)
-        = link_to("いいね！済み", "/rates/#{@question.id}/destroy", {method: "post"})
+      - if !Rate.exists?(user_id: current_user.id, question_id: @question.id)
+        = link_to("お気に入り", question_add_path(@question), { method: "post" })
       - else
-        = link_to("いいね！", "/rates/#{@question.id}/create", {method: "post"})
+        = link_to("お気に入り解除", question_add_path(@question), { method: "delete" })
 
       .resultPage__main__answerBox__title
         A:

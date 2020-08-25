@@ -1,16 +1,25 @@
 class RatesController < ApplicationController
 
   def create
-    @rate = Rate.new(user_id: current_user.id, question_id: params[:question_id])
-    @rate.save
-    redirect_to root_path
-    # redirect_to("/questions/#{params[question_id]}")
+    user = current_user
+    question = Question.find(params[:question_id])
+    if Rate.create(user_id: user.id, question_id: question.id)
+      redirect_to result_question_path(question)
+    else
+      redirect_to root_url
+    end
   end
 
+
   def destroy
-    @rate = Rate.find_by(user_id: current_user.id, question_id: params[:question_id])
-    @rate.destroy
-    redirect_to("/questions/#{params[:question_id]}")
+    user = current_user
+    question = Question.find(params[:question_id])
+    if rate = Rate.find_by(user_id: user.id, question_id: question.id)
+      rate.delete
+      redirect_to result_question_path(question)
+    else
+      redirect_to root_url
+    end
   end
 
 end

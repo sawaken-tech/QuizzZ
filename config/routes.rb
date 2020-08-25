@@ -16,10 +16,12 @@ Rails.application.routes.draw do
       get 'result', to: 'questions#result'
     end
     resources :comments, only: [:create, :show]
+
+    post 'add' => 'rates#create'
+    delete '/add' => 'rates#destroy'
+    
   end
 
-  post "rates/:questioin_id/create" => "rates#create"
-  post "rates/:questioin_id/destroy" => "rates#destroy"
 
   resources :mypages, only: [:show] do
     member do
