@@ -1,0 +1,6 @@
+.rates
+  - if !Rate.exists?(user_id: current_user.id, question_id: @question.id)
+    = link_to question_add_path(@question), method: "post" do
+      = icon('far', 'thumbs-up')
+  - else
+    = link_to "お気に入り解除", question_add_path(@question), method: "delete"
