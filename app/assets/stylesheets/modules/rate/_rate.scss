@@ -1,3 +1,14 @@
 .rates {
-  
+  text-align: center;
+  font-size: 3rem;
+  &__nogood {
+    i {
+      color: #555555;
+    }
+  }
+  &__good {
+    i {
+      color: #FF367F;
+    }
+  }
 }
