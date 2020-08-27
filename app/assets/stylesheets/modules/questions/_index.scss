@@ -44,6 +44,9 @@
           font-size: 2.0rem;
           &__good {
             margin: 5px;
+            i {
+              color: #FF367F;
+            }
             &__count {
               text-align: center;
               color: #1E90FF;
