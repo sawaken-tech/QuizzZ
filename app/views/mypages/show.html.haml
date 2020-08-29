@@ -7,9 +7,10 @@
   .mypage__midleBox
     .mypage__midleBox__container
       .mypage__midleBox__container__question
-        Questions：#{current_user.questions.count}
+        Q's：#{current_user.questions.count}
       .mypage__midleBox__container__rate
-        Rates：
+        = icon('fas', 'heart')
+        ：#{current_user.rates.count}
   .mypage__underBox
     .mypage__underBox__container
       .mypage__underBox__container__questions
