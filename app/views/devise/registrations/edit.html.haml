@@ -17,13 +17,13 @@
 
       .profilePage__formBox__container
         .profilePage__formBox__container__title
-          password_confirmation
+          password(confirmation)
         .profilePage__formBox__container__form
           = f.password_field :password_confirmation, autocomplete: "new-password"
 
       .profilePage__formBox__container
         .profilePage__formBox__container__title
-          current_password
+          current password
         .profilePage__formBox__container__form
           = f.password_field :current_password, autocomplete: "current-password"
 
