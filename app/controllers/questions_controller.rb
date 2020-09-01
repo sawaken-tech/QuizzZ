@@ -53,6 +53,7 @@ class QuestionsController < ApplicationController
 
   # 作成問題一覧
   def index_edit
+    @my_questions = Question.where(user_id: current_user)
   end
 
   # 問題編集 

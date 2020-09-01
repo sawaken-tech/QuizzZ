@@ -7,7 +7,7 @@
       .questionsIndex__title__ja
         〜編集〜
     .questionsIndexEdit__container
-      - current_user.questions.each do |question| 
+      - @my_questions.each do |question| 
         .questionsIndexEdit__container__box
           .questionsIndexEdit__container__box__title
             No#{question.id}
