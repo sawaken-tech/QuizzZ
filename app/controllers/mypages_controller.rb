@@ -3,6 +3,7 @@ class MypagesController < ApplicationController
   before_action :set_user, :set_question
 
   def show
+    @my_questions_count = Question.where(user_id: current_user).count
   end
 
   def edit_profile

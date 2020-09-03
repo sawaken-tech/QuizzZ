@@ -7,7 +7,7 @@
   .mypage__midleBox
     .mypage__midleBox__container
       .mypage__midleBox__container__question
-        Q's：#{current_user.questions.count}
+        Q's：#{@my_questions_count}
       .mypage__midleBox__container__rate
         = icon('fas', 'heart')
         ：#{current_user.rates.count}
