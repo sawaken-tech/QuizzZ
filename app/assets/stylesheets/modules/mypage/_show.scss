@@ -16,9 +16,15 @@
       justify-content: center;
       &__question {
         padding: 30px;
+        i {
+          color: #1E90FF;
+        }
       }
       &__rate {
         padding: 30px;
+        i {
+          color: #FF367F;
+        }
       }
     }
   }

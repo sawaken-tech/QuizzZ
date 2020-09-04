@@ -53,6 +53,14 @@
               font-size: 12px; 
             }
           }
+          &__nogood {
+            margin: 5px;
+            &__count {
+              text-align: center;
+              color: #1E90FF;
+              font-size: 12px; 
+            }
+          }
           &__comment {
             margin: 5px;
             &__count {

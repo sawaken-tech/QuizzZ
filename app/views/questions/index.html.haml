@@ -17,10 +17,16 @@
                 = question.sentence
 
               .questionsIndex__container__box__questionBox__icon
-                .questionsIndex__container__box__questionBox__icon__good
-                  = icon('fas', 'heart')
-                  .questionsIndex__container__box__questionBox__icon__good__count
-                    = question.rates.count
+                - if question.rates.count == 0
+                  .questionsIndex__container__box__questionBox__icon__nogood
+                    = icon('far', 'heart')
+                    .questionsIndex__container__box__questionBox__icon__nogood__count
+                      = question.rates.count
+                - else
+                  .questionsIndex__container__box__questionBox__icon__good
+                    = icon('fas', 'heart')
+                    .questionsIndex__container__box__questionBox__icon__good__count
+                      = question.rates.count
 
                 .questionsIndex__container__box__questionBox__icon__comment
                   = link_to question_path(question) do
