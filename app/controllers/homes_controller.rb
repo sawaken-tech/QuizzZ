@@ -6,4 +6,10 @@ class HomesController < ApplicationController
   def what
   end
 
+  def contact
+  end
+
+  def faq
+  end
+
 end

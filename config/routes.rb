@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :homes do
     collection do
       get 'what', to: 'homes#what'
+      get 'contact', to: 'homes#contact'
+      get 'faq', to: 'homes#faq'
     end
   end
 
