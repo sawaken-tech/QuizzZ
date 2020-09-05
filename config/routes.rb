@@ -5,6 +5,13 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
   }
 
+  resources :homes do
+    collection do
+      get 'what', to: 'homes#what'
+    end
+  end
+
+
   resources :questions do
     collection do
       get 'answer', to: 'questions#new_answer'
