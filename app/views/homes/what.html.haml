@@ -13,6 +13,8 @@
         Create
       .whatpage__subBox__title__ja
         〜問題を作る〜
+    .whatpage__subBox__createImg
+      = image_tag 'potion-of-luck.png', alt: 'create-img', height: '120', width: '159'
     .whatpage__subBox__ex
       問題を作るの説明文
 
@@ -22,7 +24,20 @@
         Slove
       .whatpage__subBox__title__ja
         〜問題を解く〜
+    .whatpage__subBox__sloveImg
+      = image_tag 'mana-potion.png', alt: 'slove-img', height: '120', width: '143'
     .whatpage__subBox__ex
       問題を解くの説明文
-      
+ 
+  .whatpage__subBox
+    .whatpage__subBox__title
+      .whatpage__subBox__title__en
+        Edit
+      .whatpage__subBox__title__ja
+        〜問題を編集する〜
+    .whatpage__subBox__editImg
+      = image_tag 'herbal-potion.png', alt: 'edit-img', height: '120', width: '147'
+    .whatpage__subBox__ex
+      問題編集の説明文
+
 = render 'footer'

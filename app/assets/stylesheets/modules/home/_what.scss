@@ -1,0 +1,39 @@
+.whatpage {
+  @include color_background;
+  padding: 50px;
+  text-align: center;
+  &__mainBox {
+    &__title {
+      font-family: 'Londrina Shadow', cursive;
+      font-size: 60px;
+      letter-spacing: 3px;
+    }
+    &__ex {
+      font-size: 25px;
+    }
+  }
+  &__subBox {
+    &__title {
+      &__en {
+        font-family: 'Londrina Shadow', cursive;
+        font-size: 40px;
+        letter-spacing: 3px;
+      }
+      &__ja {
+        font-size: 15px;
+      }
+    }
+    &__createImg {
+
+    }
+    &__sloveImg {
+
+    }
+    &__editImg {
+
+    }
+    &__ex {
+      font-size: 18px;
+    }
+  }
+}
