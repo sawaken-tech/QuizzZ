@@ -3,17 +3,23 @@
   padding: 50px;
   text-align: center;
   &__mainBox {
+    padding: 50px;
+    border-bottom: 1px solid #dddddd;
     &__title {
+      padding: 20px;
       font-family: 'Londrina Shadow', cursive;
       font-size: 60px;
       letter-spacing: 3px;
     }
     &__ex {
-      font-size: 25px;
+      font-size: 20px;
+      color: #888888;
     }
   }
   &__subBox {
+    padding: 50px;
     &__title {
+      padding: 20px;
       &__en {
         font-family: 'Londrina Shadow', cursive;
         font-size: 40px;
@@ -33,6 +39,7 @@
 
     }
     &__ex {
+      padding: 20px;
       font-size: 18px;
     }
   }
