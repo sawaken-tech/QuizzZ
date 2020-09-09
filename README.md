@@ -137,3 +137,11 @@ pass: quiz002
 ### rate_Association
 - belongs_to: user
 - belongs_to: question
+
+## contactテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|message|string||
+
+### contact_Association
