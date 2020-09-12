@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   resources :homes do
     collection do
       get 'what', to: 'homes#what'
-      get 'contact', to: 'homes#contact'
       get 'faq', to: 'homes#faq'
     end
   end
@@ -40,5 +39,9 @@ Rails.application.routes.draw do
   end
 
   root to: "homes#index"
+
+  get 'contact', to: 'contact#index'              # 入力画面
+  post 'contact/confirm', to: 'contact#confirm'   # 確認画面
+  post 'contact/thanks', to: 'contact#thanks'     # 送信完了画面
 
 end
