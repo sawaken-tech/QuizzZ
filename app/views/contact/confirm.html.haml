@@ -1,16 +1,20 @@
+= render 'homes/header'
+
 お問い合わせ
  
 = form_for @contact, :url => contact_thanks_path do |f|
   名前
-    = f.hidden_field :name
-    = @contact.name
+  = f.hidden_field :name
+  = @contact.name
 
   メールアドレス
-    = f.hidden_field :email
-    = @contact.email
+  = f.hidden_field :email
+  = @contact.email
 
   お問い合わせ内容
-    = f.hidden_field :message
-    = simple_format(@contact.message)
+  = f.hidden_field :message
+  = simple_format(@contact.message)
 
   = f.submit '送信'
+
+  = render 'homes/footer'
