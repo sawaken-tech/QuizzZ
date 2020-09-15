@@ -5,7 +5,7 @@ class ContactMailer < ActionMailer::Base
  
   def received_email(contact)
     @contact = contact
-    mail(:subject => 'お問い合わせを承りました')
+    mail to: 'quizzz.contact@gmail.com', subject: 'お問い合わせを承りました'
   end
 
 end
