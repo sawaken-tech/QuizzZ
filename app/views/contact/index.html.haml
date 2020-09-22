@@ -13,9 +13,9 @@
     - if @contact.errors.any?
       入力にエラーがあります
       %ul
-        = @contact.errors.each do |attr, msg|
+        - @contact.errors.each do |attr, msg|
           %li
-            = msg
+          = msg
 
   .contactPageIndex__form
     .contactPageIndex__form__formBox
