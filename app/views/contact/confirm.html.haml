@@ -1,20 +1,41 @@
 = render 'homes/header'
 
-お問い合わせ
- 
-= form_for @contact, :url => contact_thanks_path do |f|
-  名前
-  = f.hidden_field :name
-  = @contact.name
+.contactPageConfirm
 
-  メールアドレス
-  = f.hidden_field :email
-  = @contact.email
+  .contactPageConfirm__title
+    .contactPageConfirm__title__en
+      Contact
+    .contactPageConfirm__title__ja
+      〜お問い合わせ内容〜
 
-  お問い合わせ内容
-  = f.hidden_field :message
-  = simple_format(@contact.message)
+  .contactPageConfirm__box
+    = form_for @contact, :url => contact_thanks_path do |f|
 
-  = f.submit '送信'
+      .contactPageConfirm__box__container
+        .contactPageConfirm__box__container__title
+          name :
+        .contactPageConfirm__box__container__input
+          = f.hidden_field :name
+          = @contact.name
+
+      .contactPageConfirm__box__container
+        .contactPageConfirm__box__container__title
+          email :
+        .contactPageConfirm__box__container__input
+          = f.hidden_field :email
+          = @contact.email
+
+      .contactPageConfirm__box__container
+        .contactPageConfirm__box__container__title
+          message
+        .contactPageConfirm__box__container__input
+          = f.hidden_field :message
+          = simple_format(@contact.message)
+
+      .contactPageConfirm__box__container
+        .contactPageConfirm__box__container__sendbtn
+          = f.submit 'Send'
+        .contactPageConfirm__box__container__backbtn
+          = link_to "Back", :back
 
   = render 'homes/footer'
