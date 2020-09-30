@@ -1,41 +1,41 @@
 = render 'homes/header'
 
 .contactPageIndex
-= form_for @contact, url: contact_confirm_path do |f|
+  = form_for @contact, url: contact_confirm_path do |f|
 
-  .contactPageIndex__title
-    .contactPageIndex__title__en
-      Contact
-    .contactPageIndex__title__ja
-      〜お問い合わせ〜
+    .contactPageIndex__title
+      .contactPageIndex__title__en
+        Contact
+      .contactPageIndex__title__ja
+        〜お問い合わせ〜
 
-  .contactPageIndex__errors
-    - if @contact.errors.any?
-      入力にエラーがあります
-      %ul
-        - @contact.errors.each do |attr, msg|
-          %li
-          = msg
+    .contactPageIndex__errors
+      - if @contact.errors.any?
+        <入力にエラーがあります>
+        %ul
+          - @contact.errors.each do |attr, msg|
+            %li
+            = msg
 
-  .contactPageIndex__form
-    .contactPageIndex__form__formBox
-      .contactPageIndex__form__formBox__title
-        name
-      .contactPageIndex__form__formBox__input
-        = f.text_field :name
-    
-    .contactPageIndex__form__formBox
-      .contactPageIndex__form__formBox__title
-        email
-      .contactPageIndex__form__formBox__input
-        = f.text_field :email
-    .contactPageIndex__form__formBox
-      .contactPageIndex__form__formBox__title
-        message
-      .contactPageIndex__form__formBox__input
-        = f.text_area :message
+    .contactPageIndex__form
+      .contactPageIndex__form__formBox
+        .contactPageIndex__form__formBox__title
+          name
+        .contactPageIndex__form__formBox__input
+          = f.text_field :name
+      
+      .contactPageIndex__form__formBox
+        .contactPageIndex__form__formBox__title
+          email
+        .contactPageIndex__form__formBox__input
+          = f.text_field :email
+      .contactPageIndex__form__formBox
+        .contactPageIndex__form__formBox__title
+          message
+        .contactPageIndex__form__formBox__input
+          = f.text_area :message
 
-    .contactPageIndex__form__formBtn
-      = f.submit 'Confirm'
+      .contactPageIndex__form__formBtn
+        = f.submit 'Confirm'
 
 = render 'homes/footer'

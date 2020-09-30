@@ -1,26 +1,58 @@
 .contactPageIndex {
+  @include color_background;
   &__title {
+    @include index_title;
+    padding: 10px;
+    background-color: #777777;
     &__en {
-
+      font-size: 25px
     }
     &__ja {
-
+      font-size: 12px
     }
   }
   &__errors {
-
+    padding-top: 30px;
+    color: red;
+    text-align: center;
   }
   &__form {
+    padding: 0 30px 30px 30px;
+    text-align: center;
     &__formBox {
       &__title {
-
+        font-size: 20px;
+        color: #777777;
       }
       &__input {
-
+        width: 400px;
+        margin:  0 auto;
+        padding: 10px 0;
+        line-height: 20px;
+        input, textarea {
+          width: 100%;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+        }
+        textarea {
+          height: 10rem;
+        }
       }
     }
     &__formBtn {
-      
+      padding-top: 30px;
+      input {
+        padding: 5px 30px;
+        border: none;
+        border-radius: 5px;
+      }
+      input:hover {
+        color: white;
+        background-color: #777777;
+        font-weight: bold;
+        transition: 0.5s;
+      }
     }
   }
 }
