@@ -22,18 +22,18 @@
         .contactPageIndex__form__formBox__title
           name
         .contactPageIndex__form__formBox__input
-          = f.text_field :name
+          = f.text_field :name, placeholder: "QuizzZ 太郎"
       
       .contactPageIndex__form__formBox
         .contactPageIndex__form__formBox__title
           email
         .contactPageIndex__form__formBox__input
-          = f.text_field :email
+          = f.text_field :email, placeholder: "〇〇〇@〇〇〇"
       .contactPageIndex__form__formBox
         .contactPageIndex__form__formBox__title
           message
         .contactPageIndex__form__formBox__input
-          = f.text_area :message
+          = f.text_area :message, placeholder: "問い合わせ内容"
 
       .contactPageIndex__form__formBtn
         = f.submit 'Confirm'
