@@ -43,11 +43,13 @@
     &__formBtn {
       padding-top: 30px;
       input {
+        height: 50px;
         padding: 5px 30px;
         border: none;
         border-radius: 5px;
       }
       input:hover {
+        height: 50px;
         color: white;
         background-color: #777777;
         font-weight: bold;
