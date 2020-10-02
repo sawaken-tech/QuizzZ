@@ -33,9 +33,10 @@
           = simple_format(@contact.message)
 
       .contactPageConfirm__box__container
-        .contactPageConfirm__box__container__sendbtn
-          = f.submit 'Send'
-        .contactPageConfirm__box__container__backbtn
-          = link_to "Back", :back
+        .contactPageConfirm__box__container__btnbox
+          .contactPageConfirm__box__container__btnbox__sendbtn
+            = f.submit 'Send'
+          .contactPageConfirm__box__container__btnbox__backbtn
+            = link_to "Back", :back
 
   = render 'homes/footer'

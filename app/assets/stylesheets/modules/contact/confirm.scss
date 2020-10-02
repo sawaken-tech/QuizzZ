@@ -1,25 +1,46 @@
 .contactPageConfirm {
+  @include color_background;
   &__title {
+    @include index_title;
+    padding: 10px;
+    background-color: #777777;
     &__en {
-
+      font-size: 25px
     }
     &__ja {
-
+      font-size: 12px
     }
   }
   &__box {
+    padding: 0 30px 30px 30px;
+    text-align: center;
     &__container {
       &__title {
-
+        font-size: 20px;
+        color: #777777;
       }
       &__input {
 
       }
-      &__sendbtn {
-
-      }
-      &__backbtn {
-        
+      &__btnbox {
+        &__sendbtn {
+          padding-top: 30px;
+          input {
+            height: 50px;
+            padding: 5px 30px;
+            border: none;
+            border-radius: 5px;
+          }
+          input:hover {
+            height: 50px;
+            color: white;
+            background-color: #777777;
+            font-weight: bold;
+            transition: 0.5s;
+          }
+        }
+        &__backbtn {
+        }
       }
     }
   }
