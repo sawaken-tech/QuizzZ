@@ -15,22 +15,25 @@
         .contactPageConfirm__box__container__title
           name :
         .contactPageConfirm__box__container__input
-          = f.hidden_field :name
-          = @contact.name
+          .contactPageConfirm__box__container__input__text
+            = f.hidden_field :name
+            = @contact.name
 
       .contactPageConfirm__box__container
         .contactPageConfirm__box__container__title
           email :
         .contactPageConfirm__box__container__input
-          = f.hidden_field :email
-          = @contact.email
+          .contactPageConfirm__box__container__input__text
+            = f.hidden_field :email
+            = @contact.email
 
       .contactPageConfirm__box__container
         .contactPageConfirm__box__container__title
           message
         .contactPageConfirm__box__container__input
-          = f.hidden_field :message
-          = simple_format(@contact.message)
+          .contactPageConfirm__box__container__input__textarea
+            = f.hidden_field :message
+            = simple_format(@contact.message)
 
       .contactPageConfirm__box__container
         .contactPageConfirm__box__container__btnbox

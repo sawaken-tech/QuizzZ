@@ -12,15 +12,30 @@
     }
   }
   &__box {
-    padding: 0 30px 30px 30px;
+    padding-top: 30px;
     text-align: center;
     &__container {
+      padding: 0 30px 30px 30px;
       &__title {
         font-size: 20px;
         color: #777777;
       }
       &__input {
-
+        text-align: left;
+        width: 400px;
+        margin: 0 auto;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #dddddd;
+        font-size: 20px;
+        color: black;
+        &__text {
+          line-height: 20px;
+        }
+        &__textarea {
+          height: 10rem;
+        }
       }
       &__btnbox {
         display: flex;
@@ -54,7 +69,7 @@
             border-radius: 5px;
             line-height: 40px;
             color: black;
-            background-color: white;
+            background-color: #fff;
           }
           a:hover {
             height: 50px;  
