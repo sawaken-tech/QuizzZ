@@ -1,14 +1,38 @@
 .contactPageThanks {
+  @include color_background;
   &__icon {
   }
   &__title {
+    @include index_title;
+    padding: 10px;
     &__en {
-
+      font-size: 25px
     }
     &__ja {
-
+      font-size: 12px
     }
   }
   &__topbtn {
+    width: 100px;
+    padding: 30px 0;
+    margin: 0 auto;
+    text-align: center;
+    a {
+      display: block;
+      text-decoration: none;
+      height: 50px;
+      padding: 5px 30px;
+      border-radius: 5px;
+      line-height: 40px;
+      color: black;
+      background-color: white;
+    }
+    a:hover {
+      height: 50px;  
+      color: white;
+      background-color: #777777;
+      font-weight: bold;
+      transition: 0.5s;
+    }
   }
 }
