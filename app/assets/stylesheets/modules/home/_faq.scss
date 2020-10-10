@@ -1,0 +1,29 @@
+.faqPage {
+  @include color_background;
+  text-align: center;
+  &__top {
+    @include index_title;
+    padding: 10px;
+    background-color: #777777;
+    &__title {
+    }
+  }
+  &__messageBox {
+    &__message {
+    }
+  }
+  &__faqBox {
+    &__question {
+      &__title {
+      }
+      &__message {
+      }
+    }
+    &__answer {
+      &__title {
+      }
+      &__message {
+      }
+    }
+  }
+}
