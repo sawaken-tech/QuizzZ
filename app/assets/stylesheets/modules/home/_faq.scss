@@ -4,22 +4,28 @@
   &__top {
     @include index_title;
     padding: 10px;
+    font-size: 30px;
     background-color: #777777;
     &__title {
     }
   }
   &__messageBox {
+    padding: 30px;
     &__message {
+      color: white;
     }
   }
   &__faqBox {
+    color: white; 
     &__question {
+      padding: 50px;
       &__title {
       }
       &__message {
       }
     }
     &__answer {
+      padding: 50px;
       &__title {
       }
       &__message {
