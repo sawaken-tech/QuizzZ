@@ -16,6 +16,9 @@
               .questionsIndex__container__box__questionBox__sentence
                 = question.sentence
 
+              .questionsIndex__container__box__questionBox__username
+                = question.user.nickname
+
               .questionsIndex__container__box__questionBox__icon
                 - if question.rates.count == 0
                   .questionsIndex__container__box__questionBox__icon__nogood

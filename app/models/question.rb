@@ -1,5 +1,6 @@
 class Question < ApplicationRecord
-  has_many :users, through: :rates
+  belongs_to :user
+  has_many   :users, through: :rates
   has_many   :rates
   has_many   :comments
   has_one    :answer, dependent: :destroy
