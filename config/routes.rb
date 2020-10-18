@@ -44,4 +44,11 @@ Rails.application.routes.draw do
   post 'contact/confirm', to: 'contact#confirm'   # 確認画面
   post 'contact/thanks', to: 'contact#thanks'     # 送信完了画面
 
+
+  resources :challenges, only: [] do
+    collection do
+      get 'test', to: 'challenge#test'
+    end
+  end
+
 end
