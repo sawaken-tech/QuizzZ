@@ -1,7 +1,14 @@
 .testPage {
+  @include color_background;
+  padding: 50px;
+  text-align: center;
   &__start {
     &__container {
       &__title {
+        padding: 20px;
+        font-family: 'Londrina Shadow', cursive;
+        font-size: 60px;
+        letter-spacing: 3px;
       }
       &__ex {
       }
