@@ -48,6 +48,7 @@ Rails.application.routes.draw do
   resources :challenges, only: [] do
     collection do
       get 'test', to: 'challenge#test'
+      get 'play', to: 'challenge#play'
     end
   end
 
