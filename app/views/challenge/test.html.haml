@@ -11,24 +11,4 @@
         .testPage_start__btnbox__btn
           START
 
-  .testPage__test
-    - @shuffle.each do |question|
-      .testPage__test__titleBox
-        .testPage__test__titleBox__no
-          = question.id
-        .testPage__test__titleBox__title
-          = question.title
-      .testPage__test__sloveBox
-        .testPage__test__sloveBox__sentence
-          = question.sentence
-          .testPage__test__sloveBox__sentence__selectsBox
-            .testPage__test__sloveBox__sentence__selectsBox__select
-              = question.answer.answer
-            .testPage__test__sloveBox__sentence__selectsBox__select
-              = question.answer.four_select1
-            .testPage__test__sloveBox__sentence__selectsBox__select
-              = question.answer.four_select2
-            .testPage__test__sloveBox__sentence__selectsBox__select
-              = question.answer.four_select3
-
 = render 'homes/footer'
