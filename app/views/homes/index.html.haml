@@ -1,10 +1,6 @@
 = render 'header'
 
 .topPage
-  .topPage__testpage
-    = link_to test_challenges_path do
-      TEST
-
   .topPage__top
     .topPage__top__mainLeft
       .topPage__top__mainLeft__message
@@ -26,6 +22,11 @@
       .topPage__top__mainRight
         .topPage__top__mainRight__topImg
           = image_tag 'chemistry-2.png', alt: 'top-img', height: '300', width: '350', class: '.topPage__top__mainRight__topImg__img'
+
+  .topPage__middle
+    .topPage__middle__challengeBtn
+      = link_to test_challenges_path do
+        Challenge
 
   .topPage__down
     .topPage__down__left
