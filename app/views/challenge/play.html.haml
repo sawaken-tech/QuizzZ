@@ -1,23 +1,23 @@
 = render 'homes/header'
-
-.playPage__test
-  - @shuffle.each do |question|
-    .playPage__test__titleBox
-      .playPage__test__titleBox__no
-        = question.id
-      .playPage__test__titleBox__title
-        = question.title
-    .playPage__test__sloveBox
-      .playPage__test__sloveBox__sentence
-        = question.sentence
-        .playPage__test__sloveBox__sentence__selectsBox
-          .playPage__test__sloveBox__sentence__selectsBox__select
+.playPage
+  .playPage__test
+    - @shuffle.each do |question|
+      .playPage__test__titleBox
+        .playPage__test__titleBox__no
+          = question.id
+        .playPage__test__titleBox__title
+          = question.title
+      .playPage__test__sloveBox
+        .playPage__test__sloveBox__sentence
+          = question.sentence
+        .playPage__test__sloveBox__selectsBox
+          .playPage__test__sloveBox__selectsBox__select
             = question.answer.answer
-          .playPage__test__sloveBox__sentence__selectsBox__select
+          .playPage__test__sloveBox__selectsBox__select
             = question.answer.four_select1
-          .playPage__test__sloveBox__sentence__selectsBox__select
+          .playPage__test__sloveBox__selectsBox__select
             = question.answer.four_select2
-          .playPage__test__sloveBox__sentence__selectsBox__select
+          .playPage__test__sloveBox__selectsBox__select
             = question.answer.four_select3
 
 = render 'homes/footer'
