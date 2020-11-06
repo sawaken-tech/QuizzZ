@@ -1,10 +1,10 @@
 = render 'homes/header'
 .playPage
   .playPage__test
-    - @shuffle.each do |question|
+    - @shuffle.each_with_index do |question, index|
       .playPage__test__titleBox
         .playPage__test__titleBox__no
-          = question.id
+          = index+1
         .playPage__test__titleBox__title
           = question.title
       .playPage__test__sloveBox
