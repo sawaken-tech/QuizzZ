@@ -10,14 +10,14 @@
       .playPage__test__sloveBox
         .playPage__test__sloveBox__sentence
           = question.sentence
-        .playPage__test__sloveBox__selectsBox
-          .playPage__test__sloveBox__selectsBox__select
+        %ul.playPage__test__sloveBox__selectsBox
+          %li.playPage__test__sloveBox__selectsBox__select
             = question.answer.answer
-          .playPage__test__sloveBox__selectsBox__select
+          %li.playPage__test__sloveBox__selectsBox__select
             = question.answer.four_select1
-          .playPage__test__sloveBox__selectsBox__select
+          %li.playPage__test__sloveBox__selectsBox__select
             = question.answer.four_select2
-          .playPage__test__sloveBox__selectsBox__select
+          %li.playPage__test__sloveBox__selectsBox__select
             = question.answer.four_select3
   
   .playPage__finish
