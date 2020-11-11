@@ -49,7 +49,7 @@ Rails.application.routes.draw do
     collection do
       get 'test', to: 'challenge#test'
       get 'play', to: 'challenge#play'
-      post 'score', to: 'challenge#score'
+      get 'score', to: 'challenge#score'
     end
   end
 
