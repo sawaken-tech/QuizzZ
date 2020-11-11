@@ -8,4 +8,7 @@ class ChallengeController < ApplicationController
     @shuffle = Question.all.shuffle.take(10)
   end
 
+  def score
+  end
+
 end
