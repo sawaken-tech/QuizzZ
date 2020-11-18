@@ -1,18 +1,44 @@
 .scorePage {
-  &__title {
-
-  }
-  &__result {
-    &__score {
-
+  @include color_background;
+  padding: 70px;
+  text-align: center;
+  &__container {
+    &__title {
+      padding: 20px 20px 0 20px;
+      font-family: 'Londrina Shadow', cursive;
+      font-size: 60px;
+      letter-spacing: 3px;
     }
-    &__graph {
-
+    &__result {
+      &__score {  
+      }
+      &__graph {
+      }
     }
-  }
-  &__btn {
-    &__top {
-      
+    &__btnbox {
+      margin: 30px;
+      font-size: 30px;
+      font-family: 'Londrina Shadow', cursive;
+      &__btn {
+        margin: 0 auto;
+        border-radius: 40px;
+        width: 400px;
+        background-color: #aaaaaa;
+        text-align: center;
+        a {
+          padding: 20px;
+          color: white;
+          text-decoration: none;
+          display: block;
+        }
+        a:hover {
+          color: #777777;
+          background-color: #eeeeee;
+          border-radius: 40px;
+          opacity: 0.7;
+          font-weight: bold;
+        }
+      }
     }
   }
 }

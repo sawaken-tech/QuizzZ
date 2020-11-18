@@ -1,13 +1,16 @@
 = render 'homes/header'
 
 .scorePage
-  .scorePage__title
-    Score
-  .scorePage__result
-    .scorePage__result__score
-    .scorePage__result__graph
-  .scorePage__btn
-    .scorePage__btn__top
-      = link_to root_path do
-        TOP
+  .scorePage__container
+    .scorePage__container__title
+      Score
+    .scorePage__container__result
+      .scorePage__container__result__score
+        result
+      .scorePage__container__result__graph
+        graph
+    .scorePage__container__btnbox
+      .scorePage__container__btnbox__btn
+        = link_to root_path do
+          TOP
 = render 'homes/footer'
