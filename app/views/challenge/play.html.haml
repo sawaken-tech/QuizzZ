@@ -2,23 +2,24 @@
 .playPage
   .playPage__test
     - @shuffle.each_with_index do |question, index|
-      .playPage__test__titleBox
-        .playPage__test__titleBox__no
-          = index+1
-        .playPage__test__titleBox__title
-          = question.title
-      .playPage__test__sloveBox
-        .playPage__test__sloveBox__sentence
-          = question.sentence
-        %ul.playPage__test__sloveBox__selectsBox
-          %li.playPage__test__sloveBox__selectsBox__select
-            = question.answer.answer
-          %li.playPage__test__sloveBox__selectsBox__select
-            = question.answer.four_select1
-          %li.playPage__test__sloveBox__selectsBox__select
-            = question.answer.four_select2
-          %li.playPage__test__sloveBox__selectsBox__select
-            = question.answer.four_select3
+      .playPage__test__container
+        .playPage__test__container__titleBox
+          .playPage__test__container__titleBox__no
+            = index+1
+          .playPage__test__container__titleBox__title
+            = question.title
+        .playPage__test__container__sloveBox
+          .playPage__test__container__sloveBox__sentence
+            = question.sentence
+          %ul.playPage__test__container__sloveBox__selectsBox
+            %li.playPage__test__container__sloveBox__selectsBox__select
+              = question.answer.answer
+            %li.playPage__test__container__sloveBox__selectsBox__select
+              = question.answer.four_select1
+            %li.playPage__test__container__sloveBox__selectsBox__select
+              = question.answer.four_select2
+            %li.playPage__test__container__sloveBox__selectsBox__select
+              = question.answer.four_select3
   
   .playPage__finish
     .playPage__finish__btn
