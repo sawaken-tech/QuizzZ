@@ -10,4 +10,11 @@ $(function(){
     $(element).attr('id','box' + (index + 1).toString().padStart(2, '0'));
     });
 
+// NEXTボタンを押すと２問目の問題にする
+  function nextAnser() {
+    $("#nextbtn").on("click", function(){
+      //jsでCSSを操作するところから
+    })
+  }
+
 });
