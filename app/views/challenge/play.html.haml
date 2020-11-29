@@ -20,12 +20,12 @@
               = question.answer.four_select2
             %li.playPage__test__container__sloveBox__selectsBox__select
               = question.answer.four_select3
-        .playPage__test__container__btnBox
-          .playPage__test__container__btnBox__btn
-            = link_to "#", id: "nextbtn " do
-              NEXT
+    .playPage__test__btnBox
+      .playPage__test__btnBox__btn
+        = link_to "#", id: "#challengeNextbtn" do
+          NEXT
   
-  .playPage__finish#close
+  .playPage__finish.close
     .playPage__finish__btn
       = link_to score_challenges_path do
         Finish
