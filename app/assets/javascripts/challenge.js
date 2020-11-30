@@ -14,13 +14,27 @@ $(function(){
 
 // NEXTボタンを押すと２問目の問題にする
   function nextAnswer() {
-    $(".playPage__test__btnBox__btn").on("click", function(){
+    $('.nextQestion').on("click", function(){
+      $('.playPage__test__btnBox__btn').removeClass('nextQestion');
       $('#box01').removeClass('open');
       $('#box01').addClass('close');
       $('#box02').removeClass('close');
       $('#box02').addClass('open');
+      $('.playPage__test__btnBox__btn').addClass('nextQestion01');
     });
   }
   nextAnswer();
+
+  function nextAnswer01() {
+    $('.nextQestion01').on("click", function(){
+      $('.playPage__test__btnBox__btn').removeClass('nextQestion01');
+      $('#box02').removeClass('open');
+      $('#box02').addClass('close');
+      $('#box03').removeClass('close');
+      $('#box03').addClass('open');
+      $('.playPage__test__btnBox__btn').addClass('nextQestion02');
+    });
+  }
+  nextAnswer01();
 
 });
