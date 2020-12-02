@@ -21,8 +21,8 @@
             %li.playPage__test__container__sloveBox__selectsBox__select
               = question.answer.four_select3
         .playPage__test__container__btnBox
-          .playPage__test__container__btnBox__btn
-            = link_to "#", id: "#challengeNextbtn#{index+1}" do
+          .playPage__test__container__btnBox__btn{id: "challengeNextbtn#{index+1}"}
+            = link_to "#" do
               NEXT
   
   .playPage__finish.close
