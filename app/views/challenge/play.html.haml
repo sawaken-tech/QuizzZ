@@ -11,14 +11,14 @@
         .playPage__test__container__sloveBox
           .playPage__test__container__sloveBox__sentence
             = question.sentence
-          %ul.playPage__test__container__sloveBox__selectsBox{id: "#select#{index+1}"}
-            %li.playPage__test__container__sloveBox__selectsBox__select
+          %ul.playPage__test__container__sloveBox__selectsBox{id: "select#{index+1}"}
+            %li.playPage__test__container__sloveBox__selectsBox__select#ansewer
               = question.answer.answer
-            %li.playPage__test__container__sloveBox__selectsBox__select
+            %li.playPage__test__container__sloveBox__selectsBox__select.select
               = question.answer.four_select1
-            %li.playPage__test__container__sloveBox__selectsBox__select
+            %li.playPage__test__container__sloveBox__selectsBox__select.select
               = question.answer.four_select2
-            %li.playPage__test__container__sloveBox__selectsBox__select
+            %li.playPage__test__container__sloveBox__selectsBox__select.select
               = question.answer.four_select3
         .playPage__test__container__btnBox
           .playPage__test__container__btnBox__btn{id: "challengeNextbtn#{index+1}"}

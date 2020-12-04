@@ -12,6 +12,47 @@ $(function(){
     $('#box01').removeClass('close');
     });
 
+
+      // ランダム表示
+  function shuffle(container) {
+    var content = container.find("> *");
+    var total = content.size();
+    content.each(function() {
+      content.eq(Math.floor(Math.random()*total)).prependTo(container);
+    });
+  }
+  $(function() {
+    shuffle($("ul#select1"));
+  });
+  $(function() {
+    shuffle($("ul#select2"));
+  });
+  $(function() {
+    shuffle($("ul#select3"));
+  });
+  $(function() {
+    shuffle($("ul#select4"));
+  });
+  $(function() {
+    shuffle($("ul#select5"));
+  });
+  $(function() {
+    shuffle($("ul#select6"));
+  });
+  $(function() {
+    shuffle($("ul#select7"));
+  });
+  $(function() {
+    shuffle($("ul#select8"));
+  });
+  $(function() {
+    shuffle($("ul#select9"));
+  });
+  $(function() {
+    shuffle($("ul#select10"));
+  });
+
+
 // NEXTボタンを押すと２問目の問題にする
   function nextAnswer() {
     $('#challengeNextbtn1').on("click", function(){
