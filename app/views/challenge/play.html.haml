@@ -12,7 +12,7 @@
           .playPage__test__container__sloveBox__sentence
             = question.sentence
           %ul.playPage__test__container__sloveBox__selectsBox{id: "select#{index+1}"}
-            %li.playPage__test__container__sloveBox__selectsBox__select#ansewer
+            %li.playPage__test__container__sloveBox__selectsBox__select.answers
               = question.answer.answer
             %li.playPage__test__container__sloveBox__selectsBox__select.select
               = question.answer.four_select1
