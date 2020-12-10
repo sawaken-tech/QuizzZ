@@ -121,9 +121,4 @@ $(function(){
   }
   nextAnswer();
 
-  //クリックしたら選択肢を選択済みにする
-  // function cliclSelect() {
-  //   $(".playPage__test__container__sloveBox__selectsBox__select").on("click", function(){
-      
-  // }
 });
