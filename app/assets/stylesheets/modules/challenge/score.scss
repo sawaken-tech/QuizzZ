@@ -10,9 +10,13 @@
       letter-spacing: 3px;
     }
     &__result {
-      &__score {  
+      &__score {
+        font-family: 'Londrina Shadow', cursive;
+        font-size: 20px;
       }
       &__graph {
+        font-family: 'Londrina Shadow', cursive;
+        font-size: 20px;
       }
     }
     &__btnbox {
