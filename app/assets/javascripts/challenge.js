@@ -10,7 +10,6 @@ $(function(){
     //１０点を保持する
     //結果ページに合計点を表示する
     $(".answers").on("click", function(){
-      var score = 10;
 
     }
 
