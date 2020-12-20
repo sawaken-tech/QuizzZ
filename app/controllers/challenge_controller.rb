@@ -9,7 +9,6 @@ class ChallengeController < ApplicationController
   end
 
   def score
-    
   end
 
 end
