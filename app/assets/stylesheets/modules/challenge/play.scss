@@ -1,3 +1,9 @@
+input[type='checkbox'] 
+    { 
+    display: none; 
+    } 
+
+    
 .playPage {
   @include color_background;
   padding: 50px;

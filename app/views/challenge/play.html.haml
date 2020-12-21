@@ -11,10 +11,13 @@
         .playPage__test__container__sloveBox
           .playPage__test__container__sloveBox__sentence
             = question.sentence
+            
+            -# JSで正誤判断ではなくチェックボックスクリックすると選択したような見た目にする
+            -# ↓のHamlを整える
+            -# チェックしたら１０点加算されて最後合計点を表示する流れ
           %ul.playPage__test__container__sloveBox__selectsBox{id: "select#{index+1}"}
-            %li
-              = label_tag :answer, question.answer.answer, class: "playPage__test__container__sloveBox__selectsBox__select answers"
-              = check_box_tag :answer
+            = label_tag :answer, question.answer.answer, class: "playPage__test__container__sloveBox__selectsBox__select answers"
+            = check_box_tag :answer
             -# %li.playPage__test__container__sloveBox__selectsBox__select.answers
             -#   = question.answer.answer
             %li.playPage__test__container__sloveBox__selectsBox__select.select
