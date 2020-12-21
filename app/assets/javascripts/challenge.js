@@ -9,7 +9,15 @@ $(function(){
     //答えをクリックすると１０点
     //１０点を保持する
     //結果ページに合計点を表示する
-    $(".answers").on("click", function(){
+
+    if (document.getElementById("answer").checked) {
+      alert("チェック！！");
+      // チェックボックスがONのときの処理
+      } else {
+      // チェックボックスがOFFのときの処理
+      alert("チェック外れた！！");
+      }
+    // $(".answers").on("click", function(){
 
     }
 
