@@ -9,17 +9,8 @@ $(function(){
     //答えをクリックすると１０点
     //１０点を保持する
     //結果ページに合計点を表示する
-
-    if (document.getElementById("answer").checked) {
-      alert("チェック！！");
-      // チェックボックスがONのときの処理
-      } else {
-      // チェックボックスがOFFのときの処理
-      alert("チェック外れた！！");
-      }
-    // $(".answers").on("click", function(){
-
-    }
+     // $(".answers").on("click", function(){
+    // }
 
 
       // ランダム表示
@@ -128,6 +119,19 @@ $(function(){
       $('.playPage__finish').removeClass('close');
     });
   }
-  nextAnswer();
 
+  nextAnswer();
 });
+
+function check() {
+  $("checkAnswer").on("click", function(){
+    if (document.getElementById("checkAnswer").checked) {
+      // チェックボックスがONのときの処理
+      alert("チェック！！");
+    } else {
+      // チェックボックスがOFFのときの処理
+      alert("チェック外れた！！");
+    }
+  });
+}
+check();
