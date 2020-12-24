@@ -123,15 +123,12 @@ $(function(){
   nextAnswer();
 });
 
-function check() {
-  $("checkAnswer").on("click", function(){
-    if (document.getElementById("checkAnswer").checked) {
-      // チェックボックスがONのときの処理
-      alert("チェック！！");
+$(function(){
+  $("#checkAnswer").click(function () {
+    if ($("#checkAnswer").prop("checked") == true) {
+      alert("チェック");
     } else {
-      // チェックボックスがOFFのときの処理
-      alert("チェック外れた！！");
-    }
+      alert("noアラート");
+    }  
   });
-}
-check();
+});
