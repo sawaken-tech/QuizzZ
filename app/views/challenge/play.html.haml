@@ -16,7 +16,7 @@
             -# ↓のHamlを整える
             -# チェックしたら１０点加算されて最後合計点を表示する流れ
           %ul.playPage__test__container__sloveBox__selectsBox{id: "select#{index+1}"}
-            = label_tag :checkAnswer, question.answer.answer, class: "playPage__test__container__sloveBox__selectsBox__select answers"
+            = label_tag :checkAnswer, question.answer.answer, class: "playPage__test__container__sloveBox__selectsBox__select"
             = check_box_tag :checkAnswer
             -# %li.playPage__test__container__sloveBox__selectsBox__select.answers
             -#   = question.answer.answer

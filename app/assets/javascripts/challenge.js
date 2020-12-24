@@ -126,9 +126,9 @@ $(function(){
 $(function(){
   $("#checkAnswer").click(function () {
     if ($("#checkAnswer").prop("checked") == true) {
-      alert("チェック");
+      $(this).addClass("selectAnswer");
     } else {
-      alert("noアラート");
+      $(this).removeClass("selectAnswer");
     }  
   });
 });
