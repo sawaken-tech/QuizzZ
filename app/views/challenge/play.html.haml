@@ -15,17 +15,23 @@
             -# JSで正誤判断ではなくチェックボックスクリックすると選択したような見た目にする
             -# ↓のHamlを整える
             -# チェックしたら１０点加算されて最後合計点を表示する流れ
-          %ul.playPage__test__container__sloveBox__selectsBox{id: "select#{index+1}"}
-            = label_tag :checkAnswer, question.answer.answer, class: "playPage__test__container__sloveBox__selectsBox__select"
-            = check_box_tag :checkAnswer
+          .playPage__test__container__sloveBox__selectsBox{id: "select#{index+1}"}
+            = label_tag :checkAnswer1, question.answer.answer, class: "playPage__test__container__sloveBox__selectsBox__select1"
+            = check_box_tag :checkAnswer1
+            = label_tag :checkAnswer2, question.answer.four_select1, class: "playPage__test__container__sloveBox__selectsBox__select2"
+            = check_box_tag :checkAnswer2
+            = label_tag :checkAnswer3, question.answer.four_select2, class: "playPage__test__container__sloveBox__selectsBox__select3"
+            = check_box_tag :checkAnswer3
+            = label_tag :checkAnswer4, question.answer.four_select3, class: "playPage__test__container__sloveBox__selectsBox__select4"
+            = check_box_tag :checkAnswer4
             -# %li.playPage__test__container__sloveBox__selectsBox__select.answers
             -#   = question.answer.answer
-            %li.playPage__test__container__sloveBox__selectsBox__select.select
-              = question.answer.four_select1
-            %li.playPage__test__container__sloveBox__selectsBox__select.select
-              = question.answer.four_select2
-            %li.playPage__test__container__sloveBox__selectsBox__select.select
-              = question.answer.four_select3
+            -# %li.playPage__test__container__sloveBox__selectsBox__select.select
+            -#   = question.answer.four_select1
+            -# %li.playPage__test__container__sloveBox__selectsBox__select.select
+            -#   = question.answer.four_select2
+            -# %li.playPage__test__container__sloveBox__selectsBox__select.select
+            -#   = question.answer.four_select3
         .playPage__test__container__btnBox
           .playPage__test__container__btnBox__btn{id: "challengeNextbtn#{index+1}"}
             = link_to "#" do

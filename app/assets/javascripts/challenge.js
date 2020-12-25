@@ -124,11 +124,32 @@ $(function(){
 });
 
 $(function(){
-  $("#checkAnswer").click(function () {
-    if ($("#checkAnswer").prop("checked") == true) {
-      $(this).addClass("selectAnswer");
+  $("#checkAnswer1").click(function () {
+    if ($("#checkAnswer1").prop("checked") == true) {
+      $(".playPage__test__container__sloveBox__selectsBox__select1").addClass("selectAnswer1");
     } else {
-      $(this).removeClass("selectAnswer");
+      $(".playPage__test__container__sloveBox__selectsBox__select1").removeClass("selectAnswer1");
+    }  
+  });
+  $("#checkAnswer2").click(function () {
+    if ($("#checkAnswer2").prop("checked") == true) {
+      $(".playPage__test__container__sloveBox__selectsBox__select2").addClass("selectAnswer2");
+    } else {
+      $(".playPage__test__container__sloveBox__selectsBox__select2").removeClass("selectAnswer2");
+    }  
+  });
+  $("#checkAnswer3").click(function () {
+    if ($("#checkAnswer3").prop("checked") == true) {
+      $(".playPage__test__container__sloveBox__selectsBox__select3").addClass("selectAnswer3");
+    } else {
+      $(".playPage__test__container__sloveBox__selectsBox__select3").removeClass("selectAnswer3");
+    }  
+  });
+  $("#checkAnswer4").click(function () {
+    if ($("#checkAnswer4").prop("checked") == true) {
+      $(".playPage__test__container__sloveBox__selectsBox__select4").addClass("selectAnswer4");
+    } else {
+      $(".playPage__test__container__sloveBox__selectsBox__select4").removeClass("selectAnswer4");
     }  
   });
 });

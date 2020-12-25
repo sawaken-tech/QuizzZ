@@ -37,7 +37,7 @@ input[type='checkbox']
           flex-wrap: wrap;
           justify-content: center;
           text-align: center;
-          &__select {
+          &__select1, &__select2, &__select3, &__select4 {
             box-sizing: border-box;
             margin: 0 10px 20px 10px ;
             border-radius: 10px;
@@ -46,7 +46,7 @@ input[type='checkbox']
             background-color: white;
             cursor: pointer;
           }
-          &__select:hover {
+          &__select1:hover, &__select2:hover, &__select3:hover, &__select4:hover, {
             background-color: #808080;
             font-weight: bold;
           }
